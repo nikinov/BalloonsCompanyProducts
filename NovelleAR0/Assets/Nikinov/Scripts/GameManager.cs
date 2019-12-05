@@ -4,37 +4,33 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject obj0;
-    public GameObject obj1;
+    public GameObject Model0;
+    public GameObject Model1;
+    public GameObject Model0Panel;
+    public GameObject Model1Panel;
+    public GameObject Model0Selected;
+    public GameObject Model1Selected;
 
-    public GameObject colourUI1;
-
-    public GameObject obj0UI;
-    public GameObject obj1UI;
 
     private void Awake()
     {
-        obj0.SetActive(false);
-        obj1.SetActive(false);
-
-        obj0UI.SetActive(false);
-        obj1UI.SetActive(false);
+        Model0.SetActive(true);
+        Model1.SetActive(true);
+        Model0Selected.SetActive(false);
+        Model1Selected.SetActive(false);
     }
-
-    public void SetA ()
+    public void Modl0()
     {
-        obj0.SetActive(true);
-        obj1.SetActive(false);
-
-        obj0UI.SetActive(true);
-        obj1UI.SetActive(false);
+        Model0Selected.SetActive(true);
+        Model1Selected.SetActive(false);
+        Model0Panel.SetActive(true);
+        Model1Panel.SetActive(false);
     }
-    public void SetB()
+    public void Modl1()
     {
-        obj0.SetActive(false);
-        obj1.SetActive(true);
-
-        obj0UI.SetActive(false);
-        obj1UI.SetActive(true);
+        Model1Selected.SetActive(true);
+        Model0Selected.SetActive(false);
+        Model0Panel.SetActive(false);
+        Model1Panel.SetActive(true);
     }
 }
