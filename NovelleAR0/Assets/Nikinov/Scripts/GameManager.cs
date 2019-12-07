@@ -11,6 +11,10 @@ public class GameManager : MonoBehaviour
     public GameObject Model0Selected;
     public GameObject Model1Selected;
 
+    public Material mat0;
+    public Material mat1;
+
+    public FlexibleColorPicker picker;
 
     private void Awake()
     {
@@ -32,5 +36,13 @@ public class GameManager : MonoBehaviour
         Model0Selected.SetActive(false);
         Model0Panel.SetActive(false);
         Model1Panel.SetActive(true);
+    }
+    public void SetCombo1 ()
+    {
+        mat0.color = picker.color;
+    }
+    public void test ()
+    {
+        Debug.Log("it workes");
     }
 }

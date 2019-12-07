@@ -6,39 +6,38 @@ using UnityEngine.UI;
 public class SlideManager : MonoBehaviour
 {
     public float timer;
-    public Slider slider0;
-    public Slider slider1;
+    public Scrollbar slider0;
+    public Scrollbar slider1;
     public bool chek;
 
     private void FixedUpdate()
     {
-        Debug.Log("slid" + slider0.value);
         if (!chek)
         {
             if (slider0.value <= .5f)
             {
-                if (slider0.value > 0)
+                if (slider0.value > 0.01)
                 {
                     slider0.value -= .5f;
                 }
             }
-            if (slider0.value > .5f)
+            else if (slider0.value > .5f)
             {
-                if (timer < 20)
+                if (slider0.value < 0.99)
                 {
                     slider0.value += .5f;
                 }
             }
             if (slider1.value <= .5f)
             {
-                if (slider1.value > 0)
+                if (slider1.value > 0.01)
                 {
                     slider1.value -= .5f;
                 }
             }
-            if (slider1.value > .5f)
+            else if (slider1.value > .5f)
             {
-                if (timer < 20)
+                if (slider1.value < 0.99)
                 {
                     slider1.value += .5f;
                 }
@@ -46,7 +45,7 @@ public class SlideManager : MonoBehaviour
         }
         if (timer > 0)
         {
-            timer -= 70 * Time.deltaTime;
+            timer -= 2;
         }
         if (timer <= 0.1)
         {
