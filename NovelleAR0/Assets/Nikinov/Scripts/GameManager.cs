@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         SetModelsFalse();
+        SetPanelsFalse();
     }
     void SetModelsFalse ()
     {
