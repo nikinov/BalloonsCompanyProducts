@@ -1,22 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject Model0;
     public GameObject Model1;
+    public GameObject Model2;
     public GameObject Model0Selected;
     public GameObject Model1Selected;
+    public GameObject Model2Selected;
 
     public GameObject Panel0;
     public GameObject Panel1;
+    public GameObject Panel2;
     public GameObject Colours;
 
     public Material mat0;
     public Material mat1;
     public Material mat2;
     public Material mat3;
+    public Material mat4;
+    public Material mat5;
 
     float WeAreIn;
     int ChangeMat;
@@ -27,6 +33,10 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("it workes");
     }
+    public void ReloadScene ()
+    {
+        SceneManager.LoadScene(sceneBuildIndex: 0);
+    }
     private void Awake()
     {
         SetModelsFalse();
@@ -36,15 +46,18 @@ public class GameManager : MonoBehaviour
     {
         Model0.SetActive(false);
         Model1.SetActive(false);
+        Model2.SetActive(false);
 
         Model0Selected.SetActive(true);
         Model1Selected.SetActive(true);
+        Model2Selected.SetActive(true);
         WeAreIn = -1;
     }
     void SetPanelsFalse ()
     {
         Panel0.SetActive(false);
         Panel1.SetActive(false);
+        Panel2.SetActive(false);
 
         Colours.SetActive(false);
     }
@@ -59,6 +72,10 @@ public class GameManager : MonoBehaviour
             case 1:
                 SetPanelsFalse();
                 Panel1.SetActive(true);
+                break;
+            case 2:
+                SetPanelsFalse();
+                Panel2.SetActive(true);
                 break;
             default:
                 SetPanelsFalse();
@@ -78,8 +95,15 @@ public class GameManager : MonoBehaviour
         SetModelsFalse();
         Model1.SetActive(true);
         Model1Selected.SetActive(false);
-        Panel1.SetActive(true);
         WeAreIn = 1;
+        CheckPanels();
+    }
+    public void Modl2()
+    {
+        SetModelsFalse();
+        Model2.SetActive(true);
+        Model2Selected.SetActive(false);
+        WeAreIn = 2;
         CheckPanels();
     }
     void OpenColourEdit ()
@@ -107,6 +131,12 @@ public class GameManager : MonoBehaviour
             case 3:
                 mat3.color = picker.color;
                 break;
+            case 4:
+                mat4.color = picker.color;
+                break;
+            case 5:
+                mat5.color = picker.color;
+                break;
             default:
                 Debug.Log("Error on SetMat()");
                 break;
@@ -130,6 +160,16 @@ public class GameManager : MonoBehaviour
     public void ChangeMat3()
     {
         ChangeMat = 3;
+        OpenColourEdit();
+    }
+    public void ChangeMat4()
+    {
+        ChangeMat = 4;
+        OpenColourEdit();
+    }
+    public void ChangeMat5()
+    {
+        ChangeMat = 5;
         OpenColourEdit();
     }
 }
