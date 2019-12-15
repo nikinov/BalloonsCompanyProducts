@@ -1,11 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Vuforia;
 
 public class ChangeMode : MonoBehaviour
 {
-    public ContentPositioningBehaviour behaviour;
+    //public ContentPositioningBehaviour behaviour;
     public GameObject Multi;
     public GameObject Single;
 

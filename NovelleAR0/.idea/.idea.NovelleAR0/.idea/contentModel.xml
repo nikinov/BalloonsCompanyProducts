@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Daniel\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Daniel\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_NovelleAR0.-1214248564.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Daniel\Desktop\UnityProjects\JumpGame\BalloonsCompanyProducts\NovelleAR0" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Blue Icon Set Free" t="Include">
+          <e p="Readme.txt" t="Include" />
+        </e>
+        <e p="FlexibleColorPicker" t="Include">
+          <e p="ExampleScene" t="Include">
+            <e p="FCP_ExampleScript.cs" t="Include" />
+          </e>
+          <e p="Materials" t="Include">
+            <e p="FCP_Gradient.shader" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="FCP_SpriteMeshEditor.cs" t="Include" />
+            <e p="FCP_SpriteMeshEditor1.cs" t="Include" />
+            <e p="FlexibleColorPicker.cs" t="Include" />
+            <e p="FlexibleColorPicker1.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Nikinov" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="AnimeLeftMenu.cs" t="Include" />
+            <e p="ChangeMode.cs" t="Include" />
+            <e p="ColourShows.cs" t="Include" />
+            <e p="GameManager.cs" t="Include" />
+            <e p="SetScale.cs" t="Include" />
+          </e>
+          <e p="Slide" t="Include">
+            <e p="SlideManager.cs" t="Include" />
+          </e>
+        </e>
+        <e p="PlaceOnPlane.cs" t="Include" />
+      </e>
+      <e p="NovelleAR0.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
