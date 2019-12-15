@@ -50,7 +50,7 @@ public class PlaceOnPlane : MonoBehaviour
 
         var touch = Input.GetTouch(0);
 
-        if (m_RaycastManager.Raycast(touch.position, s_Hits, TrackableType.PlaneWithinPolygon))
+        if (IsPlaceAvaileble(touch.position))
         {
             // Raycast hits are sorted by distance, so the first one
             // will be the closest hit.
@@ -62,6 +62,20 @@ public class PlaceOnPlane : MonoBehaviour
         }
     }
 
+    public bool IsPlaceAvaileble(Vector3 touchPosition)
+    {
+        return m_RaycastManager.Raycast(touchPosition, s_Hits, TrackableType.PlaneWithinPolygon);
+    }
+
+    public void PlaceObj(Vector3 worldPosition)
+    {
+        m_SessionOrigin.MakeContentAppearAt(content, worldPosition, m_Rotation);
+    }
+
+    public Vector3 touchHitPos()
+    {
+        return s_Hits[0].pose.position;
+    }
     static List<ARRaycastHit> s_Hits = new List<ARRaycastHit>();
 
     ARSessionOrigin m_SessionOrigin;

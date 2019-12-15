@@ -29,13 +29,18 @@
             <e p="ChangeMode.cs" t="Include" />
             <e p="ColourShows.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
+            <e p="SelectDetection.cs" t="Include" />
             <e p="SetScale.cs" t="Include" />
           </e>
           <e p="Slide" t="Include">
             <e p="SlideManager.cs" t="Include" />
           </e>
         </e>
-        <e p="PlaceOnPlane.cs" t="Include" />
+        <e p="Sorpirit" t="Include">
+          <e p="MakeAppearOnPlane.cs" t="Include" />
+          <e p="PlaceOnPlane.cs" t="Include" />
+          <e p="SpawnTheObjects.cs" t="Include" />
+        </e>
       </e>
       <e p="NovelleAR0.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />

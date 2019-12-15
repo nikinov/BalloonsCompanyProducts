@@ -14,7 +14,7 @@ public class MakeAppearOnPlane : MonoBehaviour
     [SerializeField]
     [Tooltip("A transform which should be made to appear to be at the touch point.")]
     Transform m_Content;
-
+    
     /// <summary>
     /// A transform which should be made to appear to be at the touch point.
     /// </summary>
