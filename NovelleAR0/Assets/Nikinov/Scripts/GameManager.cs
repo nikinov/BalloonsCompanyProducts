@@ -115,6 +115,10 @@ public class GameManager : MonoBehaviour
     {
         CheckPanels();
     }
+    public void ChengeMat()
+    {
+
+    }
     public void SetMat()
     {
         switch (ChangeMat)
