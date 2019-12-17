@@ -6,9 +6,11 @@ public class SelectDetection : MonoBehaviour
 {
     bool Clicked;
 
+    public Camera cam;
+
     void Update()
     {
-        Ray ray = Camera.current.ScreenPointToRay(Input.mousePosition);
+        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
         {
@@ -17,15 +19,5 @@ public class SelectDetection : MonoBehaviour
 
             }
         }
-    }
-    IEnumerator OnClick()
-    {
-        Clicked = true;
-        yield return new WaitForEndOfFrame();
-        Clicked = false;
-    }
-    public void Click(GameObject A)
-    {
-        Destroy(A);
     }
 }
