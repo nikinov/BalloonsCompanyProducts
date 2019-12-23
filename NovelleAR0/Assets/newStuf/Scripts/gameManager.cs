@@ -12,8 +12,10 @@ public class gameManager : MonoBehaviour
     //checking valeus to know what is going on
     public int ModelSelected;
     public int Mode;
+    public bool EditMode;
 
     //Models
+    public GameObject PlacePoss;
     public GameObject Model1;
     public GameObject Model2;
     public GameObject Model3;
@@ -21,6 +23,8 @@ public class gameManager : MonoBehaviour
     public GameObject Model5;
 
     //UI Objects and UI stuf
+    public GameObject GenetalSettings;
+    public GameObject SpawnButton;
     public GameObject ModlUI1;
     public GameObject ModlUI2;
     public GameObject ModlUI3;
@@ -38,8 +42,34 @@ public class gameManager : MonoBehaviour
     //General functions
     private void Awake()
     {
+        SpawnButton.SetActive(false);
         ModelSelected = 0;
         SetAllUIFalse();
+        GenetalSettings.SetActive(true);
+    }
+    private void Update()
+    {
+        if (EditMode)
+        {
+            if(PlacePoss)
+            {
+                PlacePoss.SetActive(false);
+            }
+            if (ModelSelected > 0)
+            {
+                EditMode = false;
+                PlacePoss.SetActive(true);
+                SpawnButton.SetActive(true);
+            }
+        }
+        else if (!EditMode)
+        {
+            if (ModelSelected == 0)
+            {
+                EditMode = true;
+                SpawnButton.SetActive(false);
+            }
+        }
     }
     public void ReloadScene()
     {
@@ -47,8 +77,9 @@ public class gameManager : MonoBehaviour
     }
 
     //UI functions basic
-    void SetAllUIFalse()
+    public void SetAllUIFalse()
     {
+        GenetalSettings.SetActive(false);
         ModlUI1.SetActive(false);
         ModlUI2.SetActive(false);
         ModlUI3.SetActive(false);
@@ -93,29 +124,70 @@ public class gameManager : MonoBehaviour
     }
 
     //Model selection functions
+    public void GenSettings()
+    {
+        SetAllUIFalse();
+        ModelSelected = 0;
+        GenetalSettings.SetActive(true);
+    }
     public void SelectM1()
     {
-        ModelSelected = 1;
-        ModelUI1();
+        if (ModelSelected != 1)
+        {
+            ModelSelected = 1;
+            ModelUI1();
+        }
+        else if (ModelSelected == 1)
+        {
+            GenSettings();
+        }
     }
     public void SelectM2()
     {
-        ModelSelected = 2;
-        ModelUI2();
+        if (ModelSelected != 2)
+        {
+            ModelSelected = 2;
+            ModelUI2();
+        }
+        else if (ModelSelected == 2)
+        {
+            GenSettings();
+        }
     }
     public void SelectM3()
     {
-        ModelSelected = 3;
-        ModelUI3();
+        if (ModelSelected != 3)
+        {
+            ModelSelected = 3;
+            ModelUI3();
+        }
+        else if (ModelSelected == 3)
+        {
+            GenSettings();
+        }
     }
     public void SelectM4()
     {
-        ModelSelected = 4;
-        ModelUI4();
+        if (ModelSelected != 4)
+        {
+            ModelSelected = 4;
+            ModelUI4();
+        }
+        else if (ModelSelected == 4)
+        {
+            GenSettings();
+        }
     }
     public void SelectM5()
     {
-        ModelSelected = 5;
-        ModelUI5();
+        if (ModelSelected != 5)
+        {
+            ModelSelected = 5;
+            ModelUI5();
+        }
+        else if (ModelSelected == 5)
+        {
+            GenSettings();
+        }
     }
 }

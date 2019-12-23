@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObjectSpawner : MonoBehaviour
 {
-    public GameObject Spawning;
+    GameObject Spawning;
     private PlacementIndicator indicator;
     private gameManager manager;
 
@@ -15,7 +15,7 @@ public class ObjectSpawner : MonoBehaviour
         manager = FindObjectOfType<gameManager>();
     }
     
-    public void click()
+    public void Click()
     {
         switch (manager.ModelSelected)
         {
@@ -35,9 +35,12 @@ public class ObjectSpawner : MonoBehaviour
                 Spawning = manager.Model5;
                 break;
             default:
-                Debug.Log("no model selected");
+                Debug.Log("EditMode");
                 break;
         }
-        GameObject obj = Instantiate(Spawning, indicator.transform.position, indicator.transform.rotation);
+        if (!manager.EditMode)
+        {
+            GameObject obj = Instantiate(Spawning, indicator.transform.position, indicator.transform.rotation);
+        }
     }
 }
