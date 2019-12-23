@@ -6,40 +6,59 @@
     <e p="C:\Users\Daniel\Desktop\UnityProjects\JumpGame\BalloonsCompanyProducts\NovelleAR0" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="Blue Icon Set Free" t="Include">
-          <e p="Readme.txt" t="Include" />
-        </e>
-        <e p="FlexibleColorPicker" t="Include">
-          <e p="ExampleScene" t="Include">
-            <e p="FCP_ExampleScript.cs" t="Include" />
-          </e>
-          <e p="Materials" t="Include">
-            <e p="FCP_Gradient.shader" t="Include" />
-          </e>
+        <e p="newStuf" t="Include">
           <e p="Scripts" t="Include">
-            <e p="FCP_SpriteMeshEditor.cs" t="Include" />
-            <e p="FCP_SpriteMeshEditor1.cs" t="Include" />
-            <e p="FlexibleColorPicker.cs" t="Include" />
-            <e p="FlexibleColorPicker1.cs" t="Include" />
-          </e>
-        </e>
-        <e p="Nikinov" t="Include">
-          <e p="Scripts" t="Include">
-            <e p="AnimeLeftMenu.cs" t="Include" />
-            <e p="ChangeMode.cs" t="Include" />
-            <e p="ColourShows.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
-            <e p="SelectDetection.cs" t="Include" />
-            <e p="SetScale.cs" t="Include" />
-          </e>
-          <e p="Slide" t="Include">
-            <e p="SlideManager.cs" t="Include" />
+            <e p="Mode.cs" t="Include" />
+            <e p="ObjectSpawner.cs" t="Include" />
+            <e p="PlacementIndicator.cs" t="Include" />
+            <e p="Selector.cs" t="Include" />
+            <e p="SelectorUILogic.cs" t="Include" />
+            <e p="TouchControls.cs" t="Include" />
           </e>
         </e>
-        <e p="Sorpirit" t="Include">
-          <e p="MakeAppearOnPlane.cs" t="Include" />
-          <e p="PlaceOnPlane.cs" t="Include" />
-          <e p="SpawnTheObjects.cs" t="Include" />
+        <e p="OldStuf" t="Include">
+          <e p="Blue Icon Set Free" t="Include">
+            <e p="Readme.txt" t="Include" />
+          </e>
+          <e p="FlexibleColorPicker" t="Include">
+            <e p="ExampleScene" t="Include">
+              <e p="FCP_ExampleScript.cs" t="Include" />
+            </e>
+            <e p="Materials" t="Include">
+              <e p="FCP_Gradient.shader" t="Include" />
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="FCP_SpriteMeshEditor.cs" t="Include" />
+              <e p="FCP_SpriteMeshEditor1.cs" t="Include" />
+              <e p="FlexibleColorPicker.cs" t="Include" />
+              <e p="FlexibleColorPicker1.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Nikinov" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="AnimeLeftMenu.cs" t="Include" />
+              <e p="ChangeMode.cs" t="Include" />
+              <e p="ColourShows.cs" t="Include" />
+              <e p="Detect.cs" t="Include" />
+              <e p="EditMode.cs" t="Include" />
+              <e p="GameManager.cs" t="Include" />
+              <e p="SelectDetection.cs" t="Include" />
+              <e p="SetScale.cs" t="Include" />
+            </e>
+            <e p="Shader" t="Include">
+              <e p="OutlinedDeffuse.shader" t="Include" />
+              <e p="OutlinedOnly.shader" t="Include" />
+            </e>
+            <e p="Slide" t="Include">
+              <e p="SlideManager.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Sorpirit" t="Include">
+            <e p="MakeAppearOnPlane.cs" t="Include" />
+            <e p="PlaceOnPlane.cs" t="Include" />
+            <e p="SpawnTheObjects.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="NovelleAR0.sln" t="IncludeFlat" />
