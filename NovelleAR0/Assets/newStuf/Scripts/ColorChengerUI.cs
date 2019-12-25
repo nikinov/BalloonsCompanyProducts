@@ -47,14 +47,4 @@ public class ColorChengerUI : MonoBehaviour
     {
         return dropdown.value;
     }
-    public void Change()
-    {
-        EditorPanel.SetActive(false);
-        ColourPicker.SetActive(true);
-    }
-    public void Back()
-    {
-        EditorPanel.SetActive(true);
-        ColourPicker.SetActive(false);
-    }
 }
