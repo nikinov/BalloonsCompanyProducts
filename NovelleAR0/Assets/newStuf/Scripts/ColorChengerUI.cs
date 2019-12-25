@@ -6,8 +6,6 @@ using UnityEngine;
 
 public class ColorChengerUI : MonoBehaviour
 {
-    /*public GameObject ColourPicker;
-    public GameObject EditorPanel;
     [SerializeField] private FlexibleColorPicker colorPicker;
     [SerializeField] private Dropdown dropdown;
     public IColorChanger colorChanger;
@@ -30,10 +28,8 @@ public class ColorChengerUI : MonoBehaviour
 
     public void OnValueChanged(int newIndex)
     {
-        colorPicker.gameObject.SetActive(false);
         Color newColor = colorChanger.getNewColor(newIndex);
         colorPicker.startingColor = newColor;
-        colorPicker.gameObject.SetActive(true);
         colorPicker.color = newColor;
     }
 
@@ -45,5 +41,5 @@ public class ColorChengerUI : MonoBehaviour
     public int getNowIndex()
     {
         return dropdown.value;
-    }*/
+    }
 }

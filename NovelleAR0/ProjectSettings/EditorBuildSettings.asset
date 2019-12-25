@@ -8,4 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/newStuf/Scenes/ARworldFinal.unity
     guid: 542ec3a1568774a39843df137e74e8ff
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: f56ebb8a5e5fc254b90a18f7fa8b2a12,
+      type: 2}
