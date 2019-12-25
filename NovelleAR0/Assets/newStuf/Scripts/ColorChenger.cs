@@ -7,6 +7,8 @@ using UnityEngine;
 public class ColorChenger : MonoBehaviour,IColorChanger
 {
     private bool _isChengingColor;
+    FlexibleColorPicker picker;
+
     public bool IsChengingColor
     {
         get => _isChengingColor;
@@ -19,6 +21,7 @@ public class ColorChenger : MonoBehaviour,IColorChanger
     private void Awake()
     {
         chengerUi.colorChanger = this;
+        picker = FindObjectOfType<FlexibleColorPicker>();
     }
 
     public void setUpChenger(GameObject selected)
@@ -42,7 +45,7 @@ public class ColorChenger : MonoBehaviour,IColorChanger
     {
         if (_isChengingColor)
         {
-            materialHandler.GetMaterial(chengerUi.getNowIndex()).color = chengerUi.getNowColor();
+            materialHandler.GetMaterial(chengerUi.getNowIndex()).color = picker.color;
         }
     }
 }
