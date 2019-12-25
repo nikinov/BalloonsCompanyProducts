@@ -8,6 +8,7 @@ public class EditorModule : MonoBehaviour,ISelectionState
 {
     public GameObject RightPanel;
     public GameObject LeftPanel;
+    public GameObject Back;
 
     private Selector selector;
     private MovingModule movingModule;
@@ -21,6 +22,7 @@ public class EditorModule : MonoBehaviour,ISelectionState
         rotationModule = GetComponent<RotationModule>();
         colorChenger = GetComponent<ColorChenger>();
 
+        Back.SetActive(false);
         selector.SelectionState = this;
     }
 
@@ -53,14 +55,25 @@ public class EditorModule : MonoBehaviour,ISelectionState
 
     public void Rotate()
     {
+        RightPanel.SetActive(false);
+        LeftPanel.SetActive(false);
+        Back.SetActive(true);
         if (rotationModule.IsRotating)
         {
             rotationModule.EndRotation();
         }
         else
         {
-            if(selector.IsSelected) rotationModule.StatrtRotation(selector.selectedObject);
+            if (selector.IsSelected) rotationModule.StatrtRotation(selector.selectedObject);
         }
+    }
+
+    public void GoFromRotationBack()
+    {
+        Rotate();
+        RightPanel.SetActive(true);
+        LeftPanel.SetActive(true);
+        Back.SetActive(false);
     }
 
     public void DeleteSelected()
