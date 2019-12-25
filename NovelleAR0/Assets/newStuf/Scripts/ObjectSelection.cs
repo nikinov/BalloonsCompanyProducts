@@ -4,33 +4,32 @@ using UnityEngine;
 
 public class ObjectSelection : MonoBehaviour
 {
-    Camera cam;
-    SelectionEditor editor;
-    bool ThisIsSelected;
+    GameObject cam;
+    Camera camer;
+    public GameObject obj;
+    public GameObject objCh;
 
     private void Awake()
     {
-        cam = FindObjectOfType<Camera>();
-        editor = gameObject.GetComponentInChildren<SelectionEditor>();
-        ThisIsSelected = false;
-        editor.SetF();
+        cam = GameObject.FindGameObjectWithTag("MainCamera");
+        camer = cam.GetComponent<Camera>();
+        objCh.SetActive(false);
     }
     private void Update()
     {
-        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+        Ray ray = camer.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
         {
-            if (hit.transform == gameObject)
+            if (hit.transform == obj)
             {
-                editor.SetT();
-                ThisIsSelected = true;
+                objCh.SetActive(true);
             }
-            else if (hit.transform != gameObject)
-            {
-                editor.SetF();
-                ThisIsSelected = false;
-            }
+            //else if (hit.transform != gameObject)
+            //{
+                //editor.SetF();
+                //ThisIsSelected = false;
+            //}
         }
     }
 }

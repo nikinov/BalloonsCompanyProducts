@@ -37,6 +37,44 @@ public class gameManager : MonoBehaviour
     public GameObject IndicatorModlUI4;
     public GameObject IndicatorModlUI5;
 
+    //LeftPanle objects
+    public GameObject Lpanel0;
+    public GameObject Lpanel1;
+    public GameObject Lpanel2;
+    public GameObject Lpanel3;
+    public GameObject Lpanel4;
+    public GameObject Lpanel5;
+
+    //left panels object mode
+
+    GameObject LeftPanel
+    {
+        get
+        {
+            switch (ModelSelected)
+            {
+                case 1:
+                    return Lpanel1;
+                    break;
+                case 2:
+                    return Lpanel2;
+                    break;
+                case 3:
+                    return Lpanel3;
+                    break;
+                case 4:
+                    return Lpanel4;
+                    break;
+                case 5:
+                    return Lpanel5;
+                    break;
+                default:
+                    return Lpanel0;
+                    break;
+            }
+        }
+    }
+
     //end of valeus start of functions
 
     //General functions
@@ -46,12 +84,13 @@ public class gameManager : MonoBehaviour
         ModelSelected = 0;
         SetAllUIFalse();
         GenetalSettings.SetActive(true);
+        SetLeftPanel();
     }
     private void Update()
     {
         if (EditMode)
         {
-            if(PlacePoss)
+            if (PlacePoss)
             {
                 PlacePoss.SetActive(false);
             }
@@ -92,35 +131,50 @@ public class gameManager : MonoBehaviour
         IndicatorModlUI4.SetActive(false);
         IndicatorModlUI5.SetActive(false);
     }
+    public void SetLeftPanel()
+    {
+        Lpanel0.SetActive(false);
+        Lpanel1.SetActive(false);
+        Lpanel2.SetActive(false);
+        Lpanel3.SetActive(false);
+        Lpanel4.SetActive(false);
+        Lpanel5.SetActive(false);
+        LeftPanel.SetActive(true);
+    }
     void ModelUI1()
     {
         SetAllUIFalse();
         ModlUI1.SetActive(true);
         IndicatorModlUI1.SetActive(true);
+        SetLeftPanel();
     }
     void ModelUI2()
     {
         SetAllUIFalse();
         ModlUI2.SetActive(true);
         IndicatorModlUI2.SetActive(true);
+        SetLeftPanel();
     }
     void ModelUI3()
     {
         SetAllUIFalse();
         ModlUI3.SetActive(true);
         IndicatorModlUI3.SetActive(true);
+        SetLeftPanel();
     }
     void ModelUI4()
     {
         SetAllUIFalse();
         ModlUI4.SetActive(true);
         IndicatorModlUI4.SetActive(true);
+        SetLeftPanel();
     }
     void ModelUI5()
     {
         SetAllUIFalse();
         ModlUI5.SetActive(true);
         IndicatorModlUI5.SetActive(true);
+        SetLeftPanel();
     }
 
     //Model selection functions
@@ -129,6 +183,7 @@ public class gameManager : MonoBehaviour
         SetAllUIFalse();
         ModelSelected = 0;
         GenetalSettings.SetActive(true);
+        SetLeftPanel();
     }
     public void SelectM1()
     {
@@ -190,4 +245,8 @@ public class gameManager : MonoBehaviour
             GenSettings();
         }
     }
+
+    //Left Panel functions
+
+
 }
