@@ -7,11 +7,13 @@ public class ObjectSpawner : MonoBehaviour
     public GameObject Spawning;
     private PlacementIndicator indicator;
     private gameManager manager;
+    private Selector selector;
 
     void Start()
     {
         indicator = FindObjectOfType<PlacementIndicator>();
         manager = FindObjectOfType<gameManager>();
+        selector = FindObjectOfType<Selector>();
     }
     
     public void click()
@@ -34,7 +36,10 @@ public class ObjectSpawner : MonoBehaviour
                 Spawning = manager.Model5;
                 break;
             default:
-                Debug.Log("no model selected");
+                if(!selector.IsSelected)
+                {
+                    selector.TryToSelect();
+                }
                 return;
         }
         GameObject obj = Instantiate(Spawning, indicator.transform.position, indicator.transform.rotation);

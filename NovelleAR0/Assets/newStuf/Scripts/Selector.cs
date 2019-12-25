@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class Selector : MonoBehaviour
 {
-    [SerializeField] private SelectorUILogic selectorUI;
+    public GameObject EditorPanel;
     [SerializeField] private Transform cameraPos;
 
     public ISelectionState SelectionState;
     
     private RaycastHit lastRaycastHit;
 
+    MaterialHandler Handler;
     
     public GameObject selectedObject { private set; get; }
     private bool _isSelected;
@@ -19,7 +20,12 @@ public class Selector : MonoBehaviour
     public bool IsSelected => _isSelected;
 
     private GameObject tempSelectedObject;
-    
+
+    private void Awake()
+    {
+        //Handler = FindObjectOfType<MaterialHandler>();
+        EditorPanel.SetActive(false);
+    }
     void Update()
     {
         RayCastForSelectableObjects();
@@ -33,10 +39,8 @@ public class Selector : MonoBehaviour
         {
             if (isPointing)
             {
-                selectorUI.PointedOnSelectableObject();
                 tempSelectedObject = lastRaycastHit.collider.gameObject;
             }
-            else selectorUI.OnDeselected();
         }
     }
 
@@ -47,19 +51,22 @@ public class Selector : MonoBehaviour
         selectedObject = tempSelectedObject.transform.root.gameObject;
         if (selectedObject != null)
         {
+            Handler = selectedObject.GetComponentInChildren<MaterialHandler>();
+            Handler.SetT();
+            EditorPanel.SetActive(true);
             selectedObject.GetComponentInChildren<Transform>().gameObject.GetComponentInChildren<Transform>().gameObject.SetActive(true);
             _isSelected = true;
-            selectorUI.OnSelected();
             SelectionState.OnSelected();
         }
     }
 
     public void Deselect()
     {
-        selectedObject.GetComponentInChildren<Transform>().gameObject.GetComponentInChildren<Transform>().gameObject.SetActive(false);
+        EditorPanel.SetActive(false);
+        Handler.SetF();
+        //selectedObject.GetComponentInChildren<Transform>().gameObject.GetComponentInChildren<Transform>().gameObject.SetActive(false);
         selectedObject = null;
         _isSelected = false;
-        selectorUI.OnDeselected();
         SelectionState.OnDeselected();
     }
 }

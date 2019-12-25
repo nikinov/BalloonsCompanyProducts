@@ -18,7 +18,7 @@ public class ColorChenger : MonoBehaviour,IColorChanger
 
     private void Awake()
     {
-        chengerUi.colorChanger = this;
+        //chengerUi.colorChanger = this;
     }
 
     public void setUpChenger(GameObject selected)
@@ -29,7 +29,7 @@ public class ColorChenger : MonoBehaviour,IColorChanger
             materialHandler = selected.GetComponentInChildren<MaterialHandler>();
         }
         
-        chengerUi.SetUpDropdown(materialHandler.Length());
+        //chengerUi.SetUpDropdown(materialHandler.Length());
         _isChengingColor = true;
     }
 
@@ -42,7 +42,7 @@ public class ColorChenger : MonoBehaviour,IColorChanger
     {
         if (_isChengingColor)
         {
-            materialHandler.GetMaterial(chengerUi.getNowIndex()).color = chengerUi.getNowColor();
+            //materialHandler.GetMaterial(chengerUi.getNowIndex()).color = chengerUi.getNowColor();
         }
     }
 }

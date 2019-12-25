@@ -6,6 +6,7 @@ using UnityEngine;
 public class MaterialHandler : MonoBehaviour
 {
     private MeshRenderer renderer;
+    public GameObject Ch;
 
     private void Awake()
     {
@@ -30,5 +31,13 @@ public class MaterialHandler : MonoBehaviour
     {
         return renderer.materials.Length;
     }
-    
+
+    public void SetT()
+    {
+        Ch.SetActive(true);
+    }
+    public void SetF()
+    {
+        Ch.SetActive(false);
+    }
 }
