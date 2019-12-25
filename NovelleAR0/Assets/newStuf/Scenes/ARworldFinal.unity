@@ -3113,75 +3113,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1001 &1096029798
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6682794861708442602, guid: 7243044e6ad9140239a4caf40839f5de,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6682794861708442602, guid: 7243044e6ad9140239a4caf40839f5de,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 6682794861708442602, guid: 7243044e6ad9140239a4caf40839f5de,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.56
-      objectReference: {fileID: 0}
-    - target: {fileID: 6682794861708442602, guid: 7243044e6ad9140239a4caf40839f5de,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6682794861708442602, guid: 7243044e6ad9140239a4caf40839f5de,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6682794861708442602, guid: 7243044e6ad9140239a4caf40839f5de,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6682794861708442602, guid: 7243044e6ad9140239a4caf40839f5de,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6682794861708442602, guid: 7243044e6ad9140239a4caf40839f5de,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 6682794861708442602, guid: 7243044e6ad9140239a4caf40839f5de,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6682794861708442602, guid: 7243044e6ad9140239a4caf40839f5de,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6682794861708442602, guid: 7243044e6ad9140239a4caf40839f5de,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6682794861708442605, guid: 7243044e6ad9140239a4caf40839f5de,
-        type: 3}
-      propertyPath: m_Name
-      value: GameCapsule
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7243044e6ad9140239a4caf40839f5de, type: 3}
 --- !u!1 &1115946088
 GameObject:
   m_ObjectHideFlags: 0
@@ -5559,8 +5490,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 812121381}
   m_HandleRect: {fileID: 812121380}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.99836206
+  m_Value: 0.9999593
+  m_Size: 0.99835396
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6154,7 +6085,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 575760737002128573}
   m_HandleRect: {fileID: 575760737002128572}
   m_Direction: 0
-  m_Value: 0.0007133295
+  m_Value: 0.0007139831
   m_Size: 0.58818346
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -6551,7 +6482,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 575760735607974476}
   m_Direction: 2
   m_Value: 1.000001
-  m_Size: 0.9035465
+  m_Size: 0.90311736
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7903,8 +7834,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 880242381713712786}
   m_HandleRect: {fileID: 880242381713712789}
   m_Direction: 1
-  m_Value: 0.99999976
-  m_Size: 0.5883564
+  m_Value: 1
+  m_Size: 0.58835644
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -9015,7 +8946,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 880242381512123266}
   m_Direction: 2
   m_Value: 0.99999994
-  m_Size: 0.6593316
+  m_Size: 0.658227
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
