@@ -118,4 +118,11 @@ public class gameManager : MonoBehaviour
         ModelSelected = 5;
         ModelUI5();
     }
+
+    public void DeselectAll()
+    {
+        Mode = 0;
+        ModelSelected = 0;
+        SetAllUIFalse();
+    }
 }

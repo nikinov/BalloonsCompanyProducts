@@ -8,7 +8,6 @@ public class ObjectSpawner : MonoBehaviour
     private PlacementIndicator indicator;
     private gameManager manager;
 
-    // Start is called before the first frame update
     void Start()
     {
         indicator = FindObjectOfType<PlacementIndicator>();
@@ -36,7 +35,7 @@ public class ObjectSpawner : MonoBehaviour
                 break;
             default:
                 Debug.Log("no model selected");
-                break;
+                return;
         }
         GameObject obj = Instantiate(Spawning, indicator.transform.position, indicator.transform.rotation);
     }

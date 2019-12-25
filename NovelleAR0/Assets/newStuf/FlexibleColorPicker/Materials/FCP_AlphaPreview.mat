@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FCP_HPicker
+  m_Name: FCP_AlphaPreview
   m_Shader: {fileID: 4800000, guid: 5c0325a4e257b5f46ab0ba57d89184a7, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -65,7 +65,7 @@ Material:
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
-    - _Mode: 4
+    - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
@@ -75,7 +75,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color1: {r: 1, g: 0, b: 0, a: 1}
-    - _Color2: {r: 1, g: 0, b: 0.0001001358, a: 1}
+    - _Color1: {r: 0.80591804, g: 0.20560849, b: 0.2056686, a: 1}
+    - _Color2: {r: 0.80591804, g: 0.20560849, b: 0.2056686, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _HSV: {r: 1, g: 1, b: 1, a: 1}
+    - _HSV: {r: 1, g: 0.7448767, b: 0.80591804, a: 1}

@@ -7,20 +7,6 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="newStuf" t="Include">
-          <e p="Scripts" t="Include">
-            <e p="GameManager.cs" t="Include" />
-            <e p="Mode.cs" t="Include" />
-            <e p="ObjectSpawner.cs" t="Include" />
-            <e p="PlacementIndicator.cs" t="Include" />
-            <e p="Selector.cs" t="Include" />
-            <e p="SelectorUILogic.cs" t="Include" />
-            <e p="TouchControls.cs" t="Include" />
-          </e>
-        </e>
-        <e p="OldStuf" t="Include">
-          <e p="Blue Icon Set Free" t="Include">
-            <e p="Readme.txt" t="Include" />
-          </e>
           <e p="FlexibleColorPicker" t="Include">
             <e p="ExampleScene" t="Include">
               <e p="FCP_ExampleScript.cs" t="Include" />
@@ -34,6 +20,28 @@
               <e p="FlexibleColorPicker.cs" t="Include" />
               <e p="FlexibleColorPicker1.cs" t="Include" />
             </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="ColorChenger.cs" t="Include" />
+            <e p="ColorChengerUI.cs" t="Include" />
+            <e p="EditorModule.cs" t="Include" />
+            <e p="GameManager.cs" t="Include" />
+            <e p="IColorChanger.cs" t="Include" />
+            <e p="ISelectionState.cs" t="Include" />
+            <e p="MaterialHandler.cs" t="Include" />
+            <e p="Mode.cs" t="Include" />
+            <e p="MovingModule.cs" t="Include" />
+            <e p="ObjectSpawner.cs" t="Include" />
+            <e p="PlacementIndicator.cs" t="Include" />
+            <e p="RotationModule.cs" t="Include" />
+            <e p="Selector.cs" t="Include" />
+            <e p="SelectorUILogic.cs" t="Include" />
+            <e p="TouchControls.cs" t="Include" />
+          </e>
+        </e>
+        <e p="OldStuf" t="Include">
+          <e p="Blue Icon Set Free" t="Include">
+            <e p="Readme.txt" t="Include" />
           </e>
           <e p="Nikinov" t="Include">
             <e p="Scripts" t="Include">

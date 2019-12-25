@@ -1,16 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Selector : MonoBehaviour
 {
     [SerializeField] private SelectorUILogic selectorUI;
     [SerializeField] private Transform cameraPos;
+
+    public ISelectionState SelectionState;
     
     private RaycastHit lastRaycastHit;
+
     
     public GameObject selectedObject { private set; get; }
-    private bool isSelected;
+    private bool _isSelected;
+
+    public bool IsSelected => _isSelected;
+
+    private GameObject tempSelectedObject;
     
     void Update()
     {
@@ -19,28 +27,37 @@ public class Selector : MonoBehaviour
 
     private void RayCastForSelectableObjects()
     {
-        if (Physics.Raycast(cameraPos.position, cameraPos.forward, out lastRaycastHit))
+        bool isPointing = Physics.Raycast(cameraPos.position, cameraPos.forward, out lastRaycastHit);
+
+        if (!_isSelected)
         {
-            selectorUI.PointedOnSelectableObject();
+            if (isPointing)
+            {
+                selectorUI.PointedOnSelectableObject();
+                tempSelectedObject = lastRaycastHit.collider.gameObject;
+            }
+            else selectorUI.OnDeselected();
         }
     }
 
     public void TryToSelect()
     {
-        if(lastRaycastHit.collider.gameObject == null) return;
+        if(tempSelectedObject == null) return;
         
-        selectedObject = lastRaycastHit.collider.gameObject;
+        selectedObject = tempSelectedObject.transform.root.gameObject;
         if (selectedObject != null)
         {
-            isSelected = true;
+            _isSelected = true;
             selectorUI.OnSelected();
+            SelectionState.OnSelected();
         }
     }
 
     public void Deselect()
     {
         selectedObject = null;
-        isSelected = false;
+        _isSelected = false;
         selectorUI.OnDeselected();
+        SelectionState.OnDeselected();
     }
 }
