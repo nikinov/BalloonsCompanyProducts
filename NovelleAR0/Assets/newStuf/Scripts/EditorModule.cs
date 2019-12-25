@@ -6,6 +6,9 @@ using UnityEngine;
 [RequireComponent(typeof(Selector),typeof(MovingModule)),RequireComponent(typeof(RotationModule)),RequireComponent(typeof(ColorChenger))]
 public class EditorModule : MonoBehaviour,ISelectionState
 {
+    public GameObject RightPanel;
+    public GameObject LeftPanel;
+
     private Selector selector;
     private MovingModule movingModule;
     private RotationModule rotationModule;
@@ -23,6 +26,8 @@ public class EditorModule : MonoBehaviour,ISelectionState
 
     public void Move()
     {
+        RightPanel.SetActive(false);
+        LeftPanel.SetActive(false);
         if (selector.IsSelected)
         {
             if (movingModule.IsMoving)
@@ -40,6 +45,8 @@ public class EditorModule : MonoBehaviour,ISelectionState
     {
         if (movingModule.IsMoving)
         {
+            RightPanel.SetActive(true);
+            LeftPanel.SetActive(true);
             movingModule.EndMoving();
         }
     }

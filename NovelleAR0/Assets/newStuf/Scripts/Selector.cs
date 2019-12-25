@@ -47,6 +47,7 @@ public class Selector : MonoBehaviour
         selectedObject = tempSelectedObject.transform.root.gameObject;
         if (selectedObject != null)
         {
+            selectedObject.GetComponentInChildren<Transform>().gameObject.GetComponentInChildren<Transform>().gameObject.SetActive(true);
             _isSelected = true;
             selectorUI.OnSelected();
             SelectionState.OnSelected();
@@ -55,6 +56,7 @@ public class Selector : MonoBehaviour
 
     public void Deselect()
     {
+        selectedObject.GetComponentInChildren<Transform>().gameObject.GetComponentInChildren<Transform>().gameObject.SetActive(false);
         selectedObject = null;
         _isSelected = false;
         selectorUI.OnDeselected();
