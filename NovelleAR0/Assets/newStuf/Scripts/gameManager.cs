@@ -93,30 +93,70 @@ public class gameManager : MonoBehaviour
     }
 
     //Model selection functions
+    public void GenSettings()
+    {
+        SetAllUIFalse();
+        ModelSelected = 0;
+    }
     public void SelectM1()
     {
-        ModelSelected = 1;
-        ModelUI1();
+        if (ModelSelected != 1)
+        {
+            ModelSelected = 1;
+            ModelUI1();
+        }
+        else if (ModelSelected == 1)
+        {
+            GenSettings();
+        }
     }
     public void SelectM2()
     {
-        ModelSelected = 2;
-        ModelUI2();
+        if (ModelSelected != 2)
+        {
+            ModelSelected = 2;
+            ModelUI2();
+        }
+        else if (ModelSelected == 2)
+        {
+            GenSettings();
+        }
     }
     public void SelectM3()
     {
-        ModelSelected = 3;
-        ModelUI3();
+        if (ModelSelected != 3)
+        {
+            ModelSelected = 3;
+            ModelUI3();
+        }
+        else if (ModelSelected == 3)
+        {
+            GenSettings();
+        }
     }
     public void SelectM4()
     {
-        ModelSelected = 4;
-        ModelUI4();
+        if (ModelSelected != 4)
+        {
+            ModelSelected = 4;
+            ModelUI4();
+        }
+        else if (ModelSelected == 4)
+        {
+            GenSettings();
+        }
     }
     public void SelectM5()
     {
-        ModelSelected = 5;
-        ModelUI5();
+        if (ModelSelected != 5)
+        {
+            ModelSelected = 5;
+            ModelUI5();
+        }
+        else if (ModelSelected == 5)
+        {
+            GenSettings();
+        }
     }
 
     public void DeselectAll()

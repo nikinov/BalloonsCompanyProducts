@@ -23,7 +23,7 @@ public class Selector : MonoBehaviour
 
     private void Awake()
     {
-        //Handler = FindObjectOfType<MaterialHandler>();
+
         EditorPanel.SetActive(false);
     }
     void Update()
