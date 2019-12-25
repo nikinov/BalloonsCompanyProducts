@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8577467659056228382}
   - component: {fileID: 5580772248264103705}
   - component: {fileID: 2007709260770818514}
-  - component: {fileID: 1495361281449005990}
   m_Layer: 0
   m_Name: Balloon (1)
   m_TagString: Untagged
@@ -79,18 +78,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1495361281449005990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1631466865975713531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ae0089e8070f42fc8d1df1c6739dec4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3559709719049984012
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,6 +121,7 @@ GameObject:
   - component: {fileID: 3559709719882741061}
   - component: {fileID: 3559709719882741062}
   - component: {fileID: 2725394563217152238}
+  - component: {fileID: 7017757958872609785}
   m_Layer: 0
   m_Name: Balloon
   m_TagString: Untagged
@@ -214,3 +202,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f43f57dcc48aa4ea9aa3d38e0c61001b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obj: {fileID: 3559709719882741064}
+  objCh: {fileID: 1631466865975713531}
+--- !u!65 &7017757958872609785
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3559709719882741064}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.020000009, z: 0.054413073}
+  m_Center: {x: -0.0000000023283064, y: -0.0000000093132275, z: 0.027293473}
