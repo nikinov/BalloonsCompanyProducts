@@ -9,6 +9,36 @@ public class gameManager : MonoBehaviour
     //this game managet is for object mode
     //valeus
 
+    //unlock
+    public GameObject cover0;
+    public GameObject cover1;
+    public GameObject cover2;
+    public GameObject cover3;
+    public GameObject cover4;
+
+    public GameObject PurchasePanel;
+
+    public void Prem()
+    {
+        PurchasePanel.SetActive(true);
+    }
+    public void BackFromPrem()
+    {
+        PurchasePanel.SetActive(false);
+    }
+
+    private void Start()
+    {
+        //if(InAppPurchasing.IsProductOwned(EM_IAPConstants.Product_Premium_Stuff))
+        //{
+            //cover0.SetActive(false);
+            //cover1.SetActive(false);
+            //cover2.SetActive(false);
+            //cover3.SetActive(false);
+            //cover4.SetActive(false);
+        //}
+    }
+
     //checking valeus to know what is going on
     public int ModelSelected;
     public int Mode;
