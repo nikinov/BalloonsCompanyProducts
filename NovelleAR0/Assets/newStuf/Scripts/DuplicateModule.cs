@@ -24,4 +24,9 @@ public class DuplicateModule : MonoBehaviour
         _isDuplicating = false;
     }
 
+    public void RevertDuplication()
+    {
+        EndDuplicating();
+        Destroy(duplicatedObj);
+    }
 }

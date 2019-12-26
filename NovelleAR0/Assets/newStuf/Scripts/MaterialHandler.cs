@@ -25,6 +25,26 @@ public class MaterialHandler : MonoBehaviour
         renderer.materials[index] = material;
     }
 
+    public Color[] GetColors()
+    {
+        Color[] colors = new Color[Length()];
+        for(int i=0; i < Length();i++ )
+        {
+            colors[i] = renderer.materials[i].color;
+        }
+        return colors;
+    }
+
+    public void SetColors(Color[] colors)
+    {
+        if(colors.Length != Length()) return;;
+        
+        for(int i=0; i < Length();i++ )
+        {
+            renderer.materials[i].color = colors[i];
+        }
+    }
+
     public int Length()
     {
         return renderer.materials.Length;

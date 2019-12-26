@@ -20,6 +20,17 @@ public class EditorModule : MonoBehaviour,ISelectionState
     private ColorChenger colorChenger;
     private DuplicateModule duplicateModule;
     
+    private enum EditorState
+    {
+        Default,
+        Moving,
+        Rotating,
+        Duplicating,
+        ColorChanging
+    }
+
+    private EditorState lastState = EditorState.Default;
+    
     private void Awake()
     {
         selector = GetComponent<Selector>();
@@ -42,6 +53,7 @@ public class EditorModule : MonoBehaviour,ISelectionState
             if (movingModule.IsMoving)
             {
                 movingModule.EndMoving();
+                lastState = EditorState.Moving;
             }
             else
             {
@@ -57,6 +69,7 @@ public class EditorModule : MonoBehaviour,ISelectionState
             RightPanel.SetActive(true);
             LeftPanel.SetActive(true);
             movingModule.EndMoving();
+            lastState = EditorState.Moving;
         }
     }
 
@@ -68,6 +81,7 @@ public class EditorModule : MonoBehaviour,ISelectionState
         if (rotationModule.IsRotating)
         {
             rotationModule.EndRotation();
+            lastState = EditorState.Rotating;
         }
         else
         {
@@ -83,11 +97,43 @@ public class EditorModule : MonoBehaviour,ISelectionState
         if (duplicateModule.IsDuplicating)
         {
             duplicateModule.EndDuplicating();
+            lastState = EditorState.Duplicating;
         }
         else
         {
             duplicateModule.StartDuplicating(selector.selectedObject);
         }
+    }
+
+    public void Revert()
+    {
+        switch (lastState)
+        {
+            case EditorState.Moving:
+                movingModule.RevertMoving();
+                break;
+            case EditorState.Rotating:
+                rotationModule.RevertRotation();
+                break;
+            case  EditorState.Duplicating:
+                duplicateModule.RevertDuplication();
+                break;
+            case EditorState.ColorChanging:
+                colorChenger.RevertColors();
+                break; 
+        }
+        
+        lastState = EditorState.Default;
+    }
+
+    public void ChangeColors()
+    {
+        if (colorChenger.IsChengingColor)
+        {
+            lastState = EditorState.ColorChanging;
+        }
+        
+        colorChenger.IsChengingColor = !colorChenger.IsChengingColor;
     }
 
     public void GoFromRotationBack()
@@ -118,6 +164,11 @@ public class EditorModule : MonoBehaviour,ISelectionState
             {
                 rotationModule.EndRotation();
             }
+
+            if (duplicateModule.IsDuplicating)
+            {
+                duplicateModule.EndDuplicating();
+            }
             
             colorChenger.IsChengingColor = false;
 
@@ -137,8 +188,12 @@ public class EditorModule : MonoBehaviour,ISelectionState
             movingModule.RevertMoving();
             
         if(rotationModule.IsRotating)
-            rotationModule.EndRotation();
+            rotationModule.RevertRotation();
         
-        colorChenger.IsChengingColor = false;
+        if(duplicateModule.IsDuplicating)
+            duplicateModule.RevertDuplication();
+        
+        if(colorChenger.IsChengingColor)
+            colorChenger.RevertColors();
     }
 }

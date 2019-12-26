@@ -72,27 +72,6 @@ public class RotationModule : MonoBehaviour
             
         objToRotate.localRotation = Quaternion.Euler(roatation);
     }
-    
-    private void DetectMouse()
-    {
-        if (Input.GetMouseButton(0))
-        {
-            if (touchStart == Vector2.zero)
-            {
-                touchStart = Input.mousePosition;
-                initalRotation = objToRotate.localRotation.eulerAngles;
-            }
-
-            Rotate(Input.mousePosition,false);
-            
-        }
-        else
-        {
-            if(touchStart != Vector2.zero) touchStart = Vector2.zero;
-        }
-        
-        
-    }
 
     public void StatrtRotation(GameObject selectedObj)
     {
@@ -104,6 +83,12 @@ public class RotationModule : MonoBehaviour
     {
         objToRotate = null;
         _isRotating = false;
+    }
+
+    public void RevertRotation()
+    {
+        objToRotate.localRotation = Quaternion.Euler(initalRotation);
+        EndRotation();
     }
     
 }

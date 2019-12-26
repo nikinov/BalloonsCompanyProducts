@@ -10,11 +10,17 @@ public class ColorChenger : MonoBehaviour,IColorChanger
     public bool IsChengingColor
     {
         get => _isChengingColor;
-        set => _isChengingColor = value;
+        set
+        {
+            if(value && !_isChengingColor) initalColors = materialHandler.GetColors();
+            _isChengingColor = value;
+        }
     }
 
     private MaterialHandler materialHandler;
     [SerializeField] private ColorChengerUI chengerUi;
+
+    private Color[] initalColors;
 
     private void Awake()
     {
@@ -44,4 +50,10 @@ public class ColorChenger : MonoBehaviour,IColorChanger
             materialHandler.GetMaterial(chengerUi.getNowIndex()).color = chengerUi.getNowColor();
         }
     }
+
+    public void RevertColors()
+    {
+        materialHandler.SetColors(initalColors);
+    }
+    
 }
