@@ -7,9 +7,8 @@ public class MainMenuManager : MonoBehaviour
 {
     public Animator animator;
 
-    public GameObject MainPanel;
-    public GameObject HowToUsePanel;
-    public GameObject ContactUsPanel;
+    public GameObject PremButton;
+    
 
     public void LoadGame()
     {
@@ -30,5 +29,16 @@ public class MainMenuManager : MonoBehaviour
     public void BackToMainPanel()
     {
         animator.SetInteger("Panels", 0);
+    }
+    public void Unlock()
+    {
+        PremButton.SetActive(false);
+    }
+    private void Awake()
+    {
+        //if(InAppPurchasing.IsProductOwned(EM_IAPConstants.Product_Premium_Stuff))
+        //{
+        //    Unlock();
+        //}
     }
 }
