@@ -4,6 +4,8 @@ using UnityEngine;
 public class Selectable : MonoBehaviour
 {
     [SerializeField] private GameObject selectedIndicator;
+    public Material Out;
+    float Thiss = .03f;
 
     private void Start()
     {
@@ -14,6 +16,7 @@ public class Selectable : MonoBehaviour
     {
         if(selectedIndicator != null)
             selectedIndicator.SetActive(true);
+        Out.SetFloat(" _Scalee", Thiss);
     }
     
     public void Deselected()
@@ -21,5 +24,6 @@ public class Selectable : MonoBehaviour
         if(selectedIndicator != null)
             selectedIndicator.SetActive(false);
     }
+
 }
     
