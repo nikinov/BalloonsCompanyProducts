@@ -12,6 +12,6 @@ public class SetScale : MonoBehaviour
     }
     public void Hight(float A)
     {
-        selector.selectedObject.transform.position = new Vector3(0, 3 * A, 0);
+        selector.selectedObject.transform.position.y.Equals(3 * A);
     }
 }

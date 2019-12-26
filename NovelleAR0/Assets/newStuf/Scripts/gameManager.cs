@@ -40,7 +40,22 @@ public class gameManager : MonoBehaviour
     }
     public void ReloadScene()
     {
+        SceneManager.LoadScene(sceneBuildIndex: 1);
+    }
+    public void ToMainMenu()
+    {
         SceneManager.LoadScene(sceneBuildIndex: 0);
+    }
+    public void StopTime()
+    {
+        if (Time.timeScale == 0)
+        {
+            Time.timeScale = 1;
+        }
+        else if (Time.timeScale == 1)
+        {
+            Time.timeScale = 0;
+        }
     }
 
     //UI functions basic

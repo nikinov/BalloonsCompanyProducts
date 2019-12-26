@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/newStuf/Scenes/MainMenu.unity
+    guid: 279d2d2953f0c4ce19678d2fba5d4e10
+  - enabled: 1
     path: Assets/newStuf/Scenes/ARworldFinal.unity
     guid: 542ec3a1568774a39843df137e74e8ff
   m_configObjects:
