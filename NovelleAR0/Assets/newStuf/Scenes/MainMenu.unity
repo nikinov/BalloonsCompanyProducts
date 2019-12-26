@@ -2007,7 +2007,7 @@ GameObject:
   - component: {fileID: 1404219528}
   - component: {fileID: 1404219527}
   m_Layer: 5
-  m_Name: Button
+  m_Name: PurchaseButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2206,7 +2206,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1450571229
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2726,7 +2726,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1833023599
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2801,7 +2801,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1857619565
 RectTransform:
   m_ObjectHideFlags: 0
