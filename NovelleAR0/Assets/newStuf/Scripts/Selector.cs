@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Selector : MonoBehaviour
 {
     public GameObject EditorPanel;
+    public GameObject GenSettings;
     [SerializeField] private Transform cameraPos;
 
     public ISelectionState SelectionState;
@@ -13,7 +14,7 @@ public class Selector : MonoBehaviour
     private RaycastHit lastRaycastHit;
 
     
-    public GameObject selectedObject { private set; get; }
+    public GameObject selectedObject {set; get; }
     private bool _isSelected;
 
     public bool IsSelected => _isSelected;
@@ -56,6 +57,7 @@ public class Selector : MonoBehaviour
             if (selectable != null)
             {
                 EditorPanel.SetActive(true);
+                GenSettings.SetActive(false);
                 selectable.Selected();
                 SelectionState.OnSelected();
                 _isSelected = true;
@@ -66,7 +68,8 @@ public class Selector : MonoBehaviour
     public void Deselect()
     {
         EditorPanel.SetActive(false);
-    
+        GenSettings.SetActive(true);
+
         Selectable selectable = selectedObject.GetComponent<Selectable>();
         if (selectable == null) selectable = selectedObject.GetComponentInChildren<Selectable>();
         

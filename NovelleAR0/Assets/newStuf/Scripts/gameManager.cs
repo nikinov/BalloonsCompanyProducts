@@ -21,11 +21,7 @@ public class gameManager : MonoBehaviour
     public GameObject Model5;
 
     //UI Objects and UI stuf
-    public GameObject ModlUI1;
-    public GameObject ModlUI2;
-    public GameObject ModlUI3;
-    public GameObject ModlUI4;
-    public GameObject ModlUI5;
+    public GameObject ColourPanel;
 
     public GameObject IndicatorModlUI1;
     public GameObject IndicatorModlUI2;
@@ -38,6 +34,7 @@ public class gameManager : MonoBehaviour
     //General functions
     private void Awake()
     {
+        ColourPanel.SetActive(false);
         ModelSelected = 0;
         SetAllUIFalse();
     }
@@ -49,12 +46,6 @@ public class gameManager : MonoBehaviour
     //UI functions basic
     void SetAllUIFalse()
     {
-        ModlUI1.SetActive(false);
-        ModlUI2.SetActive(false);
-        ModlUI3.SetActive(false);
-        ModlUI4.SetActive(false);
-        ModlUI5.SetActive(false);
-
         IndicatorModlUI1.SetActive(false);
         IndicatorModlUI2.SetActive(false);
         IndicatorModlUI3.SetActive(false);
@@ -64,31 +55,26 @@ public class gameManager : MonoBehaviour
     void ModelUI1()
     {
         SetAllUIFalse();
-        ModlUI1.SetActive(true);
         IndicatorModlUI1.SetActive(true);
     }
     void ModelUI2()
     {
         SetAllUIFalse();
-        ModlUI2.SetActive(true);
         IndicatorModlUI2.SetActive(true);
     }
     void ModelUI3()
     {
         SetAllUIFalse();
-        ModlUI3.SetActive(true);
         IndicatorModlUI3.SetActive(true);
     }
     void ModelUI4()
     {
         SetAllUIFalse();
-        ModlUI4.SetActive(true);
         IndicatorModlUI4.SetActive(true);
     }
     void ModelUI5()
     {
         SetAllUIFalse();
-        ModlUI5.SetActive(true);
         IndicatorModlUI5.SetActive(true);
     }
 
