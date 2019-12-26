@@ -29,6 +29,7 @@ public class gameManager : MonoBehaviour
 
     private void Start()
     {
+
         //if(InAppPurchasing.IsProductOwned(EM_IAPConstants.Product_Premium_Stuff))
         //{
             //cover0.SetActive(false);
@@ -67,6 +68,7 @@ public class gameManager : MonoBehaviour
         ColourPanel.SetActive(false);
         ModelSelected = 0;
         SetAllUIFalse();
+        BackFromPrem();
     }
     public void ReloadScene()
     {
