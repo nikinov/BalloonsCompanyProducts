@@ -8,7 +8,6 @@ public class MainMenuManager : MonoBehaviour
     public Animator animator;
 
     public GameObject PremButton;
-    
 
     public void LoadGame()
     {
