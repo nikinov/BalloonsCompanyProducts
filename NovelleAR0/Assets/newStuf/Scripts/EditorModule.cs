@@ -3,7 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using newStuf.Scripts;
 using UnityEngine;
-[RequireComponent(typeof(Selector),typeof(MovingModule)),RequireComponent(typeof(RotationModule)),RequireComponent(typeof(ColorChenger))]
+[RequireComponent(typeof(Selector),typeof(MovingModule)),
+ RequireComponent(typeof(RotationModule)),
+ RequireComponent(typeof(ColorChenger)),
+ RequireComponent(typeof(DuplicateModule))]
 public class EditorModule : MonoBehaviour,ISelectionState
 {
     public GameObject RightPanel;
@@ -14,6 +17,7 @@ public class EditorModule : MonoBehaviour,ISelectionState
     private MovingModule movingModule;
     private RotationModule rotationModule;
     private ColorChenger colorChenger;
+    private DuplicateModule duplicateModule;
     
     private void Awake()
     {
@@ -21,6 +25,7 @@ public class EditorModule : MonoBehaviour,ISelectionState
         movingModule = GetComponent<MovingModule>();
         rotationModule = GetComponent<RotationModule>();
         colorChenger = GetComponent<ColorChenger>();
+        duplicateModule = GetComponent<DuplicateModule>();
 
         Back.SetActive(false);
         selector.SelectionState = this;
@@ -65,6 +70,18 @@ public class EditorModule : MonoBehaviour,ISelectionState
         else
         {
             if (selector.IsSelected) rotationModule.StatrtRotation(selector.selectedObject);
+        }
+    }
+    
+    public void Duplicate()
+    {
+        if (duplicateModule.IsDuplicating)
+        {
+            duplicateModule.EndDuplicating();
+        }
+        else
+        {
+            duplicateModule.StartDuplicating(selector.selectedObject);
         }
     }
 

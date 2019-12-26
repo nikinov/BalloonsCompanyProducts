@@ -12,7 +12,6 @@ public class Selector : MonoBehaviour
     
     private RaycastHit lastRaycastHit;
 
-    MaterialHandler Handler;
     
     public GameObject selectedObject { private set; get; }
     private bool _isSelected;
@@ -51,22 +50,29 @@ public class Selector : MonoBehaviour
         selectedObject = tempSelectedObject.transform.root.gameObject;
         if (selectedObject != null)
         {
-            Handler = selectedObject.GetComponentInChildren<MaterialHandler>();
-            Handler.SetT();
-            EditorPanel.SetActive(true);
-            selectedObject.GetComponentInChildren<Transform>().gameObject.GetComponentInChildren<Transform>().gameObject.SetActive(true);
-            _isSelected = true;
-            SelectionState.OnSelected();
+            Selectable selectable = selectedObject.GetComponent<Selectable>();
+            if (selectable == null) selectable = selectedObject.GetComponentInChildren<Selectable>();
+
+            if (selectable != null)
+            {
+                EditorPanel.SetActive(true);
+                selectable.Selected();
+                SelectionState.OnSelected();
+                _isSelected = true;
+            }
         }
     }
 
     public void Deselect()
     {
         EditorPanel.SetActive(false);
-        Handler.SetF();
-        //selectedObject.GetComponentInChildren<Transform>().gameObject.GetComponentInChildren<Transform>().gameObject.SetActive(false);
+    
+        Selectable selectable = selectedObject.GetComponent<Selectable>();
+        if (selectable == null) selectable = selectedObject.GetComponentInChildren<Selectable>();
+        
+        selectable.Deselected();
+        SelectionState.OnDeselected();
         selectedObject = null;
         _isSelected = false;
-        SelectionState.OnDeselected();
     }
 }

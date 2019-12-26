@@ -24,6 +24,7 @@
           <e p="Scripts" t="Include">
             <e p="ColorChenger.cs" t="Include" />
             <e p="ColorChengerUI.cs" t="Include" />
+            <e p="DuplicateModule.cs" t="Include" />
             <e p="EditorModule.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
             <e p="IColorChanger.cs" t="Include" />
@@ -34,6 +35,7 @@
             <e p="ObjectSpawner.cs" t="Include" />
             <e p="PlacementIndicator.cs" t="Include" />
             <e p="RotationModule.cs" t="Include" />
+            <e p="Selectable.cs" t="Include" />
             <e p="Selector.cs" t="Include" />
             <e p="SelectorUILogic.cs" t="Include" />
             <e p="TouchControls.cs" t="Include" />
