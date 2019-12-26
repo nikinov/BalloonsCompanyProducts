@@ -229,7 +229,14 @@ MonoBehaviour:
     mEnableAmazonSandboxTesting: 0
     mValidateAppleReceipt: 0
     mValidateGooglePlayReceipt: 0
-    mProducts: []
+    mProducts:
+    - _name: Premium Stuff
+      _type: 2
+      _id: premium
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
   mNotificationSettings:
     mAutoInit: 1
     mAutoInitDelay: 0
