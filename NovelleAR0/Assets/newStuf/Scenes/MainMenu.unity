@@ -826,9 +826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 416276749}
-  MainPanel: {fileID: 284763379}
-  HowToUsePanel: {fileID: 1833023598}
-  ContactUsPanel: {fileID: 1857619564}
+  PremButton: {fileID: 0}
 --- !u!4 &552430855
 Transform:
   m_ObjectHideFlags: 0
@@ -2726,7 +2724,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1833023599
 RectTransform:
   m_ObjectHideFlags: 0

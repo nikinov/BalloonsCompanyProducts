@@ -7,9 +7,7 @@ public class MainMenuManager : MonoBehaviour
 {
     public Animator animator;
 
-    public GameObject MainPanel;
-    public GameObject HowToUsePanel;
-    public GameObject ContactUsPanel;
+    public GameObject PremButton;
 
     public void LoadGame()
     {
