@@ -12,6 +12,7 @@ public class EditorModule : MonoBehaviour,ISelectionState
     public GameObject RightPanel;
     public GameObject LeftPanel;
     public GameObject Back;
+    public GameObject BackD;
 
     private Selector selector;
     private MovingModule movingModule;
@@ -28,6 +29,7 @@ public class EditorModule : MonoBehaviour,ISelectionState
         duplicateModule = GetComponent<DuplicateModule>();
 
         Back.SetActive(false);
+        BackD.SetActive(false);
         selector.SelectionState = this;
     }
 
@@ -75,6 +77,9 @@ public class EditorModule : MonoBehaviour,ISelectionState
     
     public void Duplicate()
     {
+        RightPanel.SetActive(false);
+        LeftPanel.SetActive(false);
+        BackD.SetActive(true);
         if (duplicateModule.IsDuplicating)
         {
             duplicateModule.EndDuplicating();
@@ -91,6 +96,13 @@ public class EditorModule : MonoBehaviour,ISelectionState
         RightPanel.SetActive(true);
         LeftPanel.SetActive(true);
         Back.SetActive(false);
+    }
+    public void GoFromDuplicationBack()
+    {
+        Duplicate();
+        RightPanel.SetActive(true);
+        LeftPanel.SetActive(true);
+        BackD.SetActive(false);
     }
 
     public void DeleteSelected()
