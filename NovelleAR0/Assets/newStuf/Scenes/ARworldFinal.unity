@@ -1064,7 +1064,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ???
+  m_Text: ADD FEATURE
 --- !u!222 &234327671
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3448,7 +3448,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &875854939
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7778,8 +7778,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 812121381}
   m_HandleRect: {fileID: 812121380}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.9984874
+  m_Value: 1.0000407
+  m_Size: 0.9984805
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7974,7 +7974,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2090026646
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8460,8 +8460,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 575760737002128573}
   m_HandleRect: {fileID: 575760737002128572}
   m_Direction: 0
-  m_Value: 0.0007132202
-  m_Size: 0.58818334
+  m_Value: 0.00071409217
+  m_Size: 0.5881835
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -8857,8 +8857,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 575760735607974477}
   m_HandleRect: {fileID: 575760735607974476}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.77870876
+  m_Value: 1.0000006
+  m_Size: 0.77790433
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -10210,8 +10210,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 880242381713712786}
   m_HandleRect: {fileID: 880242381713712789}
   m_Direction: 1
-  m_Value: 1.0000001
-  m_Size: 0.5883563
+  m_Value: 0.99999976
+  m_Size: 0.58835644
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -10570,8 +10570,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 880242381383032860}
   m_HandleRect: {fileID: 880242381383032863}
   m_Direction: 2
-  m_Value: 0.99993896
-  m_Size: 0.9984873
+  m_Value: 1.0000204
+  m_Size: 0.99848044
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -11343,8 +11343,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 880242381512123267}
   m_HandleRect: {fileID: 880242381512123266}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.84763247
+  m_Value: 1.0000001
+  m_Size: 0.8470293
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
