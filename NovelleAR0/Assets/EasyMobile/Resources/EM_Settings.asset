@@ -230,7 +230,7 @@ MonoBehaviour:
     mValidateAppleReceipt: 0
     mValidateGooglePlayReceipt: 0
     mProducts:
-    - _name: Premium Stuff
+    - _name: Premium stuff
       _type: 2
       _id: premium
       _price: 
