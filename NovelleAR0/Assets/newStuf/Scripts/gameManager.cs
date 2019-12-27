@@ -15,6 +15,7 @@ public class gameManager : MonoBehaviour
     public GameObject cover2;
     public GameObject cover3;
     public GameObject cover4;
+    public GameObject cover5;
 
     public GameObject PurchasePanel;
 
@@ -63,12 +64,25 @@ public class gameManager : MonoBehaviour
     //end of valeus start of functions
 
     //General functions
+    public void Unlockkk()
+    {
+        PlayerPrefs.SetInt("unlock", 1);
+    }
     private void Awake()
     {
         ColourPanel.SetActive(false);
         ModelSelected = 0;
         SetAllUIFalse();
         BackFromPrem();
+        if(PlayerPrefs.GetInt("unlock") == 1)
+        {
+            cover0.SetActive(false);
+            cover1.SetActive(false);
+            cover2.SetActive(false);
+            cover3.SetActive(false);
+            cover4.SetActive(false);
+            cover5.SetActive(false);
+        }
     }
     public void ReloadScene()
     {
