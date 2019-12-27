@@ -7,58 +7,46 @@ using UnityEngine.UI;
 
 public class SubscibeToPremiumStuff : MonoBehaviour
 {
-<<<<<<< HEAD
 
-    //[SerializeField] private Text dedugText;
-=======
-    
->>>>>>> 2ad84c9addab7aabbb0b11829abc0416ae76e6a8
-    private void Start()
-    {
-        // Check if initialization has completed (the user has been authenticated)
-        // Check if the IAP module has been initialized
-        bool isInitialized = InAppPurchasing.IsInitialized();
-    }
-    
-    void Awake()
-    {
-        if (!RuntimeManager.IsInitialized())
-            RuntimeManager.Init();
-    }
+	//[SerializeField] private Text dedugText;
+	private void Start()
+	{
+		// Check if initialization has completed (the user has been authenticated)
+		// Check if the IAP module has been initialized
+		bool isInitialized = InAppPurchasing.IsInitialized();
+	}
 
-    private void OnEnable()
-    {
-        InAppPurchasing.PurchaseCompleted += subsS;
-        InAppPurchasing.PurchaseFailed += subsF;
-    }
+	void Awake()
+	{
+		if (!RuntimeManager.IsInitialized())
+			RuntimeManager.Init();
+	}
 
-    private void OnDisable()
-    {
-        InAppPurchasing.PurchaseCompleted -= subsS;
-        InAppPurchasing.PurchaseFailed -= subsF;
-    }
+	private void OnEnable()
+	{
+		InAppPurchasing.PurchaseCompleted += subsS;
+		InAppPurchasing.PurchaseFailed += subsF;
+	}
 
-    public void Subscribe()
-    {
-        InAppPurchasing.Purchase(EM_IAPConstants.Product_Premium_stuff);
-    }
+	private void OnDisable()
+	{
+		InAppPurchasing.PurchaseCompleted -= subsS;
+		InAppPurchasing.PurchaseFailed -= subsF;
+	}
 
-    private void subsS(IAPProduct product)
-    {
-<<<<<<< HEAD
-        //dedugText.text += "+";
-=======
-        
->>>>>>> 2ad84c9addab7aabbb0b11829abc0416ae76e6a8
-    }
+	public void Subscribe()
+	{
+		//InAppPurchasing.Purchase(EM_IAPConstants.Product_Premium_Stuff);
+	}
 
-    private void subsF(IAPProduct product)
-    {
-<<<<<<< HEAD
-        //dedugText.text += "-";
-=======
-        
->>>>>>> 2ad84c9addab7aabbb0b11829abc0416ae76e6a8
-    }
-    
+	private void subsS(IAPProduct product)
+	{
+		//dedugText.text += "+";
+	}
+
+	private void subsF(IAPProduct product)
+	{
+		//dedugText.text += "-";
+	}
+
 }

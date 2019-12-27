@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 972572306772572310}
   - component: {fileID: 7797510331578547133}
   - component: {fileID: 7797510331578547132}
+  - component: {fileID: 6577591641982646902}
   m_Layer: 0
   m_Name: BalloonsArray0
   m_TagString: Untagged
@@ -107,6 +108,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa6261241f47c474b88d5b7db0068ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6577591641982646902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532230272628395082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b05892aaaa340d88d67446c0358a0f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedIndicator: {fileID: 2569629006679126542}
 --- !u!1 &2569629006679126542
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,7 +210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3570214428380163434}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Ball1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

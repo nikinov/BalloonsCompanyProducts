@@ -121,6 +121,9 @@ GameObject:
   - component: {fileID: 7670426999023337335}
   - component: {fileID: 1669096070305989953}
   - component: {fileID: 4905927850158012856}
+  - component: {fileID: 7237546644332171669}
+  - component: {fileID: 344354853042898232}
+  - component: {fileID: 9033018890174811003}
   m_Layer: 0
   m_Name: Ball5
   m_TagString: Untagged
@@ -190,3 +193,41 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7237546644332171669
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6640994636230757732}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.028665505, y: 0.018072123, z: 0.040856216}
+  m_Center: {x: -0.0000000013969839, y: -0.0009275323, z: -0.010489515}
+--- !u!114 &344354853042898232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6640994636230757732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b05892aaaa340d88d67446c0358a0f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedIndicator: {fileID: 1581449612549506573}
+--- !u!114 &9033018890174811003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6640994636230757732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa6261241f47c474b88d5b7db0068ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
