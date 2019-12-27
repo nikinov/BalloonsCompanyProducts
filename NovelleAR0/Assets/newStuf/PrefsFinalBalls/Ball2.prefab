@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 8162795172608675962}
   - component: {fileID: 1551930187325986482}
   - component: {fileID: 8729452373709072864}
+  - component: {fileID: 1871678008877737489}
   m_Layer: 0
   m_Name: BalloonsArray1
   m_TagString: Untagged
@@ -218,3 +219,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedIndicator: {fileID: 1124843904520941659}
+--- !u!114 &1871678008877737489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7598915052389737638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa6261241f47c474b88d5b7db0068ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -45,4 +45,8 @@ public class MainMenuManager : MonoBehaviour
         //    Unlock();
         //}
     }
+    public void GetRidOfUnlock()
+    {
+        PlayerPrefs.SetInt("unlock", 0);
+    }
 }
