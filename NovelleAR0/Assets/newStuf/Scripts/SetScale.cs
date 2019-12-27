@@ -6,6 +6,7 @@ public class SetScale : MonoBehaviour
 {
     public Selector selector;
 
+    [SerializeField] private float heightSensitivity;
     public void Scale(float A)
     {
         selector.selectedObject.transform.localScale = new Vector3(1 + 24 * A, 1 + 24 * A, 1 + 24 * A);
@@ -19,7 +20,7 @@ public class SetScale : MonoBehaviour
         Collider collider = selected.GetComponent<Collider>();
         if (collider == null)
             collider = selected.GetComponentInChildren<Collider>();
-        Debug.Log(A);
-        selector.selectedObject.transform.position = new Vector3(X,  collider.bounds.max.y + (3 * (A + 1)) - 0.5f, Z);
+        Debug.Log(A + "," + "  " + collider.bounds.size.y);
+        selector.selectedObject.transform.position = new Vector3(X,     heightSensitivity * collider.bounds.size.y * A , Z);
     }
 }
