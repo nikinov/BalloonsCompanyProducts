@@ -32,9 +32,14 @@ public class MainMenuManager : MonoBehaviour
     public void Unlock()
     {
         PremButton.SetActive(false);
+        PlayerPrefs.SetInt("unlock", 1);
     }
     private void Awake()
     {
+        if(PlayerPrefs.GetInt("unlock") == 1)
+        {
+            Unlock();
+        }
         //if(InAppPurchasing.IsProductOwned(EM_IAPConstants.Product_Premium_Stuff))
         //{
         //    Unlock();
