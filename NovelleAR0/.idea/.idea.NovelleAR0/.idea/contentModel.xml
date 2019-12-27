@@ -692,10 +692,6 @@
         </e>
         <e p="OldStuf" t="Include">
           <e p="Nikinov" t="Include">
-            <e p="Shader" t="Include">
-              <e p="OutlinedDeffuse.shader" t="Include" />
-              <e p="OutlinedOnly.shader" t="Include" />
-            </e>
             <e p="Slide" t="Include">
               <e p="SlideManager.cs" t="Include" />
             </e>
@@ -758,6 +754,9 @@
               <e p="PurchasingCheck.cs" t="Include" />
             </e>
           </e>
+        </e>
+        <e p="Shader" t="Include">
+          <e p="OutlinedOnly.shader" t="Include" />
         </e>
       </e>
       <e p="NovelleAR0.sln" t="IncludeFlat" />

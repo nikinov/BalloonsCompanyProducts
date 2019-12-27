@@ -15,6 +15,8 @@ public class SetScale : MonoBehaviour
         Vector3 vector = selector.selectedObject.transform.position;
         float X = vector.x;
         float Z = vector.z;
-        selector.selectedObject.transform.position = new Vector3(X, (3 * A) - 0.5f, Z);
+        GameObject slected = selector.selectedObject;
+        Collider collider = selector.selectedObject.GetComponent<Collider>();
+        selector.selectedObject.transform.position = new Vector3(X,  collider.bounds.max.y * (3 * A) - 0.5f, Z);
     }
 }
