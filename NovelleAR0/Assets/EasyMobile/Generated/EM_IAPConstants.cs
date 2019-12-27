@@ -8,7 +8,7 @@ namespace EasyMobile
 {
 	public static class EM_IAPConstants
 	{
-		public const string Product_Premium_Stuff = "Premium Stuff";
+		public const string Product_Premium_stuff = "Premium stuff";
 
 	}
 }

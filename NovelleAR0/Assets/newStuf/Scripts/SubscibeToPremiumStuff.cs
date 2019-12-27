@@ -7,8 +7,12 @@ using UnityEngine.UI;
 
 public class SubscibeToPremiumStuff : MonoBehaviour
 {
+<<<<<<< HEAD
 
     //[SerializeField] private Text dedugText;
+=======
+    
+>>>>>>> 2ad84c9addab7aabbb0b11829abc0416ae76e6a8
     private void Start()
     {
         // Check if initialization has completed (the user has been authenticated)
@@ -36,17 +40,25 @@ public class SubscibeToPremiumStuff : MonoBehaviour
 
     public void Subscribe()
     {
-        InAppPurchasing.Purchase(EM_IAPConstants.Product_Premium_Stuff);
+        InAppPurchasing.Purchase(EM_IAPConstants.Product_Premium_stuff);
     }
 
     private void subsS(IAPProduct product)
     {
+<<<<<<< HEAD
         //dedugText.text += "+";
+=======
+        
+>>>>>>> 2ad84c9addab7aabbb0b11829abc0416ae76e6a8
     }
 
     private void subsF(IAPProduct product)
     {
+<<<<<<< HEAD
         //dedugText.text += "-";
+=======
+        
+>>>>>>> 2ad84c9addab7aabbb0b11829abc0416ae76e6a8
     }
     
 }
