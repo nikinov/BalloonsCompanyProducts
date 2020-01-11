@@ -30,11 +30,12 @@ public class MainMenuManager : MonoBehaviour
     public void BackToMainPanel()
     {
         animator.SetInteger("Panels", 0);
-        Pause();
+        //Pause();
     }
     public void Unlock()
     {
         PremButton.SetActive(false);
+        animator.SetInteger("Panels", 0);
         PlayerPrefs.SetInt("unlock", 1);
     }
     private void Awake()
@@ -48,7 +49,7 @@ public class MainMenuManager : MonoBehaviour
         //    Unlock();
         //}
 
-        pause.SetActive(false);
+        //pause.SetActive(false);
     }
     public void GetRidOfUnlock()
     {
@@ -56,7 +57,7 @@ public class MainMenuManager : MonoBehaviour
     }
 
     //video
-    public RawImage image;
+    /*public RawImage image;
     public RawImage image2;
     public VideoPlayer vid;
     public AudioSource audio;
@@ -91,5 +92,5 @@ public class MainMenuManager : MonoBehaviour
         pause.SetActive(false);
         PlayButton.SetActive(true);
         image.texture = image2.texture;
-    }
+    }*/
 }

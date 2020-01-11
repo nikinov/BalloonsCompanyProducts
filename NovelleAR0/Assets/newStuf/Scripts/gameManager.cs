@@ -67,6 +67,7 @@ public class gameManager : MonoBehaviour
     public void Unlockkk()
     {
         PlayerPrefs.SetInt("unlock", 1);
+        PurchasePanel.SetActive(false);
     }
     private void Awake()
     {

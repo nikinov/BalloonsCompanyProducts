@@ -258,7 +258,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &163322119
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1075,12 +1075,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 416276749}
   PremButton: {fileID: 808816130}
-  image: {fileID: 1193182994}
-  image2: {fileID: 1340766893}
-  vid: {fileID: 1193182997}
-  audio: {fileID: 1193182993}
-  PlayButton: {fileID: 1228245634}
-  pause: {fileID: 163322118}
 --- !u!4 &552430855
 Transform:
   m_ObjectHideFlags: 0
@@ -2015,7 +2009,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1193182993
 AudioSource:
   m_ObjectHideFlags: 0
