@@ -1,0 +1,7 @@
+{
+	"items" : [
+		{"key" : "Bt_Settings" , "value" : "Settings"},
+		{"key" : "Bt_Play" , "value" : "Play"},
+		{"key" : "Bt_Exit" , "value" : "Exit"}
+	]
+}
