@@ -54,6 +54,8 @@ public class MainMenuManager : MonoBehaviour
     public void GetRidOfUnlock()
     {
         PlayerPrefs.SetInt("unlock", 0);
+        animator.SetInteger("Panels", 0);
+        PremButton.SetActive(true);
     }
 
     //video

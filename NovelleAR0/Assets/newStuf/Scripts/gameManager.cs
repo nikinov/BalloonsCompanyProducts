@@ -8,6 +8,7 @@ public class gameManager : MonoBehaviour
     //this is the new GameManager
     //this game managet is for object mode
     //valeus
+    public Selector selector;
 
     //unlock
     public GameObject cover0;
@@ -61,6 +62,12 @@ public class gameManager : MonoBehaviour
     public GameObject IndicatorModlUI4;
     public GameObject IndicatorModlUI5;
 
+    public GameObject settingsPanel;
+
+    public GameObject Lpanel;
+    public GameObject Rpanel;
+    bool UIbool;
+
     //end of valeus start of functions
 
     //General functions
@@ -68,6 +75,12 @@ public class gameManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("unlock", 1);
         PurchasePanel.SetActive(false);
+        cover0.SetActive(false);
+        cover1.SetActive(false);
+        cover2.SetActive(false);
+        cover3.SetActive(false);
+        cover4.SetActive(false);
+        cover5.SetActive(false);
     }
     private void Awake()
     {
@@ -84,6 +97,7 @@ public class gameManager : MonoBehaviour
             cover4.SetActive(false);
             cover5.SetActive(false);
         }
+        settingsPanel.SetActive(false);
     }
     public void ReloadScene()
     {
@@ -93,15 +107,19 @@ public class gameManager : MonoBehaviour
     {
         SceneManager.LoadScene(sceneBuildIndex: 0);
     }
-    public void StopTime()
+    public void SetUIFalse()
     {
-        if (Time.timeScale == 0)
+        Rpanel.SetActive(false);
+        Lpanel.SetActive(false);
+        UIbool = true;
+    }
+    public void SetUItrue()
+    {
+        if(UIbool)
         {
-            Time.timeScale = 1;
-        }
-        else if (Time.timeScale == 1)
-        {
-            Time.timeScale = 0;
+            Rpanel.SetActive(true);
+            Lpanel.SetActive(true);
+            UIbool = false;
         }
     }
 
@@ -118,26 +136,54 @@ public class gameManager : MonoBehaviour
     {
         SetAllUIFalse();
         IndicatorModlUI1.SetActive(true);
+        if (selector.EditorPanel.active)
+        {
+            selector.Deselect();
+        }
     }
     void ModelUI2()
     {
         SetAllUIFalse();
         IndicatorModlUI2.SetActive(true);
+        if (selector.EditorPanel.active)
+        {
+            selector.Deselect();
+        }
     }
     void ModelUI3()
     {
         SetAllUIFalse();
         IndicatorModlUI3.SetActive(true);
+        if (selector.EditorPanel.active)
+        {
+            selector.Deselect();
+        }
     }
     void ModelUI4()
     {
         SetAllUIFalse();
         IndicatorModlUI4.SetActive(true);
+        if (selector.EditorPanel.active)
+        {
+            selector.Deselect();
+        }
     }
     void ModelUI5()
     {
         SetAllUIFalse();
         IndicatorModlUI5.SetActive(true);
+        if (selector.EditorPanel.active)
+        {
+            selector.Deselect();
+        }
+    }
+    public void openSettings()
+    {
+        settingsPanel.SetActive(true);
+    }
+    public void closeSettings()
+    {
+        settingsPanel.SetActive(false);
     }
 
     //Model selection functions
