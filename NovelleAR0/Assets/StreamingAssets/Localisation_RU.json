@@ -2,6 +2,7 @@
 	"items" : [
 		{"key" : "Bt_Settings" , "value" : "Настройки"},
 		{"key" : "Bt_Play" , "value" : "Играть"},
-		{"key" : "Bt_Exit" , "value" : "Выйти"}
+		{"key" : "Bt_Exit" , "value" : "Выйти"},
+        {"key" : "Bt_Language" , "value" : "JAZYK"}
 	]
 }

@@ -1,7 +1,8 @@
 {
 	"items" : [
-		{"key" : "Bt_Settings" , "value" : "Settings"},
+		{"key" : "Bt_Settings" , "value" : "SETTINGS"},
 		{"key" : "Bt_Play" , "value" : "Play"},
-		{"key" : "Bt_Exit" , "value" : "Exit"}
+		{"key" : "Bt_Exit" , "value" : "Exit"},
+        {"key" : "Bt_Language" , "value" : "LANGUAGE"}
 	]
 }
