@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FCP_BPicker
-  m_Shader: {fileID: 4800000, guid: 5c0325a4e257b5f46ab0ba57d89184a7, type: 3}
+  m_Name: TestingShader 2
+  m_Shader: {fileID: 4800000, guid: 18c4328d00a994e11957440a49f33331, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -59,7 +59,6 @@ Material:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _DoubleMode: 0
     - _DstBlend: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -67,15 +66,15 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
+    - _Outline: 1
     - _Parallax: 0.02
+    - _Scalee: 0.3
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color1: {r: 0.8604912, g: 0.57395273, b: 0, a: 1}
-    - _Color2: {r: 0.8604912, g: 0.57395273, b: 1, a: 1}
+    - _Color: {r: 0.8113208, g: 0.42748693, b: 0.24875402, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _HSV: {r: 0.83334726, g: 0.33299407, b: 0.8604912, a: 1}
+    - _OutlineColor: {r: 1, g: 1, b: 0, a: 1}
