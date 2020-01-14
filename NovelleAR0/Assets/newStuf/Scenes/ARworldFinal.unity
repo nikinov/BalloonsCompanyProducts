@@ -737,7 +737,6 @@ GameObject:
   - component: {fileID: 130761899}
   - component: {fileID: 130761898}
   - component: {fileID: 130761897}
-  - component: {fileID: 130761900}
   m_Layer: 5
   m_Name: DeselectButton (1)
   m_TagString: Untagged
@@ -855,19 +854,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 130761895}
   m_CullTransparentMesh: 0
---- !u!114 &130761900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 130761895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c0ea0f368e746745b20d3721c05f3e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  key: Bt_Deselect
 --- !u!1 &140953203
 GameObject:
   m_ObjectHideFlags: 0
@@ -2695,7 +2681,6 @@ GameObject:
   - component: {fileID: 427460110}
   - component: {fileID: 427460109}
   - component: {fileID: 427460108}
-  - component: {fileID: 427460111}
   m_Layer: 5
   m_Name: UNDOButton (2)
   m_TagString: Untagged
@@ -2813,19 +2798,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 427460106}
   m_CullTransparentMesh: 0
---- !u!114 &427460111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 427460106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c0ea0f368e746745b20d3721c05f3e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  key: Bt_Undo
 --- !u!1 &434649519
 GameObject:
   m_ObjectHideFlags: 0
@@ -6103,6 +6075,7 @@ GameObject:
   - component: {fileID: 1083283144}
   - component: {fileID: 1083283146}
   - component: {fileID: 1083283145}
+  - component: {fileID: 1083283147}
   m_Layer: 5
   m_Name: EditText (2)
   m_TagString: Untagged
@@ -6169,6 +6142,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1083283143}
   m_CullTransparentMesh: 0
+--- !u!114 &1083283147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083283143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c0ea0f368e746745b20d3721c05f3e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: Bt_Deselect
 --- !u!1 &1086113888
 GameObject:
   m_ObjectHideFlags: 0
@@ -9745,6 +9731,7 @@ GameObject:
   - component: {fileID: 1769706474}
   - component: {fileID: 1769706476}
   - component: {fileID: 1769706475}
+  - component: {fileID: 1769706477}
   m_Layer: 5
   m_Name: EditText (2)
   m_TagString: Untagged
@@ -9811,6 +9798,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1769706473}
   m_CullTransparentMesh: 0
+--- !u!114 &1769706477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769706473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c0ea0f368e746745b20d3721c05f3e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: Bt_Undo
 --- !u!224 &1820556994 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2863935870252182785, guid: 7f1ded928aa154159ac7259a16479c03,
@@ -11003,8 +11003,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 812121381}
   m_HandleRect: {fileID: 812121380}
   m_Direction: 2
-  m_Value: 1.0000204
-  m_Size: 0.9983361
+  m_Value: 1
+  m_Size: 0.9987516
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -12028,8 +12028,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 575760737002128573}
   m_HandleRect: {fileID: 575760737002128572}
   m_Direction: 0
-  m_Value: 0.0007141463
-  m_Size: 0.58818346
+  m_Value: 0.00071360206
+  m_Size: 0.5881835
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -12426,7 +12426,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 575760735607974476}
   m_Direction: 2
   m_Value: 1.0000006
-  m_Size: 0.7618081
+  m_Size: 0.8100446
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -13779,8 +13779,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 880242381713712786}
   m_HandleRect: {fileID: 880242381713712789}
   m_Direction: 1
-  m_Value: 1
-  m_Size: 0.58835644
+  m_Value: 0.9999999
+  m_Size: 0.5883564
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -14139,8 +14139,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 880242381383032860}
   m_HandleRect: {fileID: 880242381383032863}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.998336
+  m_Value: 1.0000407
+  m_Size: 0.9987516
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -14916,8 +14916,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 880242381512123267}
   m_HandleRect: {fileID: 880242381512123266}
   m_Direction: 2
-  m_Value: 1.0000004
-  m_Size: 0.68838924
+  m_Value: 1.0000005
+  m_Size: 0.7465473
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
