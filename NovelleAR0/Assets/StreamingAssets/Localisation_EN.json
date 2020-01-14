@@ -19,6 +19,15 @@
 		{"key" : "Pn_Locked" , "value" : "LOCKED"},
 		{"key" : "Bt_Premium" , "value" : "PREMIUM"},
 		{"key" : "Lb_Hight" , "value" : "HIGHT"},
-		{"key" : "Lb_Size" , "value" : "SIZE"}
+		{"key" : "Lb_Size" , "value" : "SIZE"},
+		{"key" : "Lb_PremiumPrice" , "value" : "10€/month"},
+		{"key" : "Lb_Price" , "value" : "PRICE"},
+		{"key" : "Lb_Personalised_custom_fetures" , "value" : "Personalised custom fetures"},
+		{"key" : "Lb_Scale_editing" , "value" : "Scale editing"},
+		{"key" : "Lb_Hight_editing" , "value" : "Hight editing"},
+		{"key" : "Lb_Extra_3D_models" , "value" : "Extra 3D models"},
+		{"key" : "Lb_Premium_version_contains" , "value" : "Premium version contains"},
+		{"key" : "Bt_UnlockPremium" , "value" : "Unlock Premium"},
+		{"key" : "Lb_UndoPremium" , "value" : "Undo Premium"}
 	]
 }
