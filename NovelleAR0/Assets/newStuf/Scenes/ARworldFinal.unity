@@ -580,6 +580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selector: {fileID: 1123082099}
+  language: {fileID: 0}
   cover0: {fileID: 932318332}
   cover1: {fileID: 1209568308}
   cover2: {fileID: 295217026}
@@ -6602,7 +6603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selector: {fileID: 1123082099}
-  heightSensitivity: 0
+  heightSensitivity: 1
 --- !u!1 &1143381774
 GameObject:
   m_ObjectHideFlags: 0
@@ -7187,7 +7188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c0ea0f368e746745b20d3721c05f3e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: Bt_Duplcate
+  key: Bt_Duplicate
 --- !u!1 &1302272375
 GameObject:
   m_ObjectHideFlags: 0

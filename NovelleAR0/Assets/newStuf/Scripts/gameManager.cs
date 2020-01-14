@@ -9,6 +9,7 @@ public class gameManager : MonoBehaviour
     //this game managet is for object mode
     //valeus
     public Selector selector;
+    public LanguageSwitcher language;
 
     //unlock
     public GameObject cover0;
