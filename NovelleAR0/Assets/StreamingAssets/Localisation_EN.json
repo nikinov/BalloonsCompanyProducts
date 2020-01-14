@@ -28,6 +28,7 @@
 		{"key" : "Lb_Extra_3D_models" , "value" : "Extra 3D models"},
 		{"key" : "Lb_Premium_version_contains" , "value" : "Premium version contains"},
 		{"key" : "Bt_UnlockPremium" , "value" : "Unlock Premium"},
-		{"key" : "Lb_UndoPremium" , "value" : "Undo Premium"}
+		{"key" : "Lb_UndoPremium" , "value" : "Undo Premium"},
+		{"key" : "Lb_Welcome" , "value" : "WELCOME TO AR CUSTOMS"}
 	]
 }

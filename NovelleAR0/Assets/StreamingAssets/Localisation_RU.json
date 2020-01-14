@@ -28,6 +28,7 @@
 		{"key" : "Lb_Extra_3D_models" , "value" : "ДООЛНИТИТЕЛЬНЫЕ 3Д МОДЕЛИ"},
 		{"key" : "Lb_Premium_version_contains" , "value" : "ПРЕМИУМ ВЕРСИЯ СОДЕРЖИТ:"},
 		{"key" : "Bt_UnlockPremium" , "value" : "РАЗБЛОКИРОВАТЬ ПРЕМИУМ"},
-		{"key" : "Lb_UndoPremium" , "value" : "ОТМЕНИТЬ ПРЕМИУМ"}
+		{"key" : "Lb_UndoPremium" , "value" : "ОТМЕНИТЬ ПРЕМИУМ"},
+		{"key" : "Lb_Welcome" , "value" : "Добро пожаловать в AR CUSTOMS"}
 	]
 }
