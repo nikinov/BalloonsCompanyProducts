@@ -3,6 +3,22 @@
 		{"key" : "Bt_Settings" , "value" : "SETTINGS"},
 		{"key" : "Bt_Play" , "value" : "Play"},
 		{"key" : "Bt_Exit" , "value" : "Exit"},
-        {"key" : "Bt_Language" , "value" : "LANGUAGE"}
+		{"key" : "Bt_Language" , "value" : "LANGUAGE"},
+		{"key" : "Bt_Start" , "value" : "START"},
+		{"key" : "Bt_HowToUse" , "value" : "HOW TO USE"},
+		{"key" : "Bt_ContactUs" , "value" : "CONTACT US"},
+		{"key" : "Bt_GetPremium" , "value" : "GET PREMIUM"},
+		{"key" : "Bt_ChengLocation" , "value" : "CHENG LOCATION"},
+		{"key" : "Bt_Delete" , "value" : "DELETE"},
+		{"key" : "Bt_Rotate" , "value" : "ROTATE"},
+		{"key" : "Bt_Colours" , "value" : "COLOURS"},
+		{"key" : "Bt_Duplicate" , "value" : "DUPLICATE"},
+		{"key" : "Bt_Deselect" , "value" : "DESELECT"},
+		{"key" : "Bt_AddFeature" , "value" : "ADD FEATURE"},
+		{"key" : "Bt_Undo" , "value" : "UNDO"},
+		{"key" : "Pn_Locked" , "value" : "LOCKED"},
+		{"key" : "Bt_Premium" , "value" : "PREMIUM"},
+		{"key" : "Lb_Hight" , "value" : "HIGHT"},
+		{"key" : "Lb_Size" , "value" : "SIZE"}
 	]
 }

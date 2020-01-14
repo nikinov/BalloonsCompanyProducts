@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Video;
+using LocalizationTools;
 
 public class MainMenuManager : MonoBehaviour
 {
@@ -27,11 +28,20 @@ public class MainMenuManager : MonoBehaviour
     {
         animator.SetInteger("Panels", 3);
     }
+
+    public void ShowWelcomePanel(){
+        animator.SetInteger("Panels", 4);
+    }
+
     public void BackToMainPanel()
     {
         animator.SetInteger("Panels", 0);
         //Pause();
     }
+
+    
+
+
     public void Unlock()
     {
         PremButton.SetActive(false);
@@ -44,12 +54,25 @@ public class MainMenuManager : MonoBehaviour
         {
             Unlock();
         }
+
+        
+
+
+
         //if(InAppPurchasing.IsProductOwned(EM_IAPConstants.Product_Premium_Stuff))
         //{
         //    Unlock();
         //}
 
         //pause.SetActive(false);
+    }
+
+    private void Start() {
+        if(PlayerPrefs.HasKey("Language")){
+            LocalizationManager.instance.LoadLocalizedText(PlayerPrefs.GetString("Language"));
+        }else{
+            ShowWelcomePanel();
+        }
     }
     public void GetRidOfUnlock()
     {

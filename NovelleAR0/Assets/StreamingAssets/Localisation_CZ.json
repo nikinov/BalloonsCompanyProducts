@@ -1,0 +1,24 @@
+{
+	"items" : [
+		{"key" : "Bt_Settings" , "value" : "SETTINGS"},
+		{"key" : "Bt_Play" , "value" : "Play"},
+		{"key" : "Bt_Exit" , "value" : "Exit"},
+		{"key" : "Bt_Language" , "value" : "LANGUAGE"},
+		{"key" : "Bt_Start" , "value" : "START"},
+		{"key" : "Bt_HowToUse" , "value" : "START"},
+		{"key" : "Bt_ContactUs" , "value" : "START"},
+		{"key" : "Bt_GetPremium" , "value" : "START"},
+		{"key" : "Bt_ChengLocation" , "value" : "START"},
+		{"key" : "Bt_Delete" , "value" : "START"},
+		{"key" : "Bt_Rotate" , "value" : "START"},
+		{"key" : "Bt_Colours" , "value" : "START"},
+		{"key" : "Bt_Duplicate" , "value" : "START"},
+		{"key" : "Bt_Deselect" , "value" : "START"},
+		{"key" : "Bt_AddFeature" , "value" : "START"},
+		{"key" : "Bt_Undo" , "value" : "START"},
+		{"key" : "Pn_Locked" , "value" : "START"},
+		{"key" : "Bt_Premium" , "value" : "START"},
+		{"key" : "Lb_Hight" , "value" : "START"},
+		{"key" : "Lb_Size" , "value" : "START"}
+	]
+}

@@ -13,6 +13,10 @@ namespace LocalizationTools
         private void Start() {
             label = GetComponent<Text>();
             LocalizationManager.instance.OnLocalisedTextUpdated += UpdateLocalizationText;
+
+            if(LocalizationManager.instance.isReady){
+                UpdateLocalizationText();
+            }
         }
 
         private void UpdateLocalizationText(){

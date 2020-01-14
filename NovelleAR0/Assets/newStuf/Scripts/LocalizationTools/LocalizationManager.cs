@@ -9,6 +9,8 @@ namespace LocalizationTools
     public class LocalizationManager : MonoBehaviour
     {
         
+
+
         public static LocalizationManager instance;
 
         private Dictionary<string,string> _localizedText;
@@ -51,6 +53,8 @@ namespace LocalizationTools
                 }
 
                 _isReady = true;
+
+                PlayerPrefs.SetString("Language",filename);
 
             }else{
                 Debug.LogError("Cannot finde localisation file : " + filename +  " in : " + filePath);
