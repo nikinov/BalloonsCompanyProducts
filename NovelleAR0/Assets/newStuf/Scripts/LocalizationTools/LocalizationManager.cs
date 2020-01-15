@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.Networking;
+using System.Collections;
 
 namespace LocalizationTools
 {
@@ -35,11 +37,31 @@ namespace LocalizationTools
 
             string filePath = Path.Combine(Application.streamingAssetsPath,filename);
 
-            if(File.Exists(filePath)){
+#if UNITY_ANDROID
+
+    StartCoroutine(WebLoad(filename));
+    return;
+
+#endif
+
+            if(File.Exists(filePath) ){
 
                 string dataAsJson = File.ReadAllText(filePath);
+                LoadFromJson(dataAsJson);
 
-                LocalizationData localizationDate = JsonUtility.FromJson<LocalizationData>(dataAsJson);
+                _isReady = true;
+                PlayerPrefs.SetString("Language",filename);
+
+            }else{
+                Debug.LogError("Cannot finde localisation file : " + filename +  " in : " + filePath + " \n sA:" + Application.streamingAssetsPath);
+                
+                _isReady = false;
+            }
+
+        }
+
+        private void LoadFromJson(string dataAsJson){
+            LocalizationData localizationDate = JsonUtility.FromJson<LocalizationData>(dataAsJson);
 
                 foreach (LocalizationItem item in localizationDate.items)
                 {
@@ -51,14 +73,22 @@ namespace LocalizationTools
                 if(OnLocalisedTextUpdated != null){
                     OnLocalisedTextUpdated();
                 }
+        }
+
+        IEnumerator WebLoad(string filename)
+        {
+
+            string filePath = Path.Combine(Application.streamingAssetsPath,filename);
+
+            UnityWebRequest www = UnityWebRequest.Get(filePath);
+            yield return www.SendWebRequest();
+            if (www.isNetworkError || www.isHttpError)
+                Debug.LogError(www.error);
+            else{
+                LoadFromJson(www.downloadHandler.text);
 
                 _isReady = true;
-
                 PlayerPrefs.SetString("Language",filename);
-
-            }else{
-                Debug.LogError("Cannot finde localisation file : " + filename +  " in : " + filePath);
-                _isReady = false;
             }
 
         }
