@@ -45,7 +45,7 @@ public class RotationModule : MonoBehaviour
                     break;
                 case TouchPhase.Ended:
                     
-                    
+
                     break;
             }
         }
@@ -59,15 +59,15 @@ public class RotationModule : MonoBehaviour
         Vector2 diraction = lenghtVector.normalized;
         if (modifyZ)
         {
-            roatation.z = initalRotation.z + sensitivity * (int) lenghtVector.magnitude;
+            roatation.z = initalRotation.z + sensitivity * (int) lenghtVector.x;
             
         }else if (Mathf.Abs(diraction.x) > Mathf.Abs(diraction.y))
         {
-            roatation.y = initalRotation.y + sensitivity * (int) lenghtVector.magnitude;
+            roatation.y = initalRotation.y + sensitivity * (int) lenghtVector.y;
         }
         else
         {
-            roatation.x = initalRotation.x + sensitivity * (int) lenghtVector.magnitude;
+            roatation.x = initalRotation.x + sensitivity * (int) lenghtVector.x;
         }
             
         objToRotate.localRotation = Quaternion.Euler(roatation);
