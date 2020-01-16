@@ -22,6 +22,7 @@
 		{"key" : "Lb_Size" , "value" : "РАЗМЕР"},
 		{"key" : "Lb_PremiumPrice" , "value" : "10€ В МЕСЯЦ"},
 		{"key" : "Lb_Price" , "value" : "ЦЕНА"},
+        {"key" : "Lb_RsetAllSettings" , "value" : "Сбросить все настройки"},
 		{"key" : "Lb_Personalised_custom_fetures" , "value" : "ПЕРСОНАЛИЗИРОВАНАЯ ФУНКЦИЯ"},
 		{"key" : "Lb_Scale_editing" , "value" : "ИЗМЕНЕНИЕ РАЗМЕРА"},
 		{"key" : "Lb_Hight_editing" , "value" : "ИЗМЕНЕНИЕ ВЫСОТЫ"},
