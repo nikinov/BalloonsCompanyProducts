@@ -29,8 +29,14 @@ public class MainMenuManager : MonoBehaviour
         animator.SetInteger("Panels", 3);
     }
 
-    public void ShowWelcomePanel(){
+    public void ShowWelcomePanel()
+    {
         animator.SetInteger("Panels", 4);
+    }
+
+    public void ShowSettingsPanel()
+    {
+        animator.SetInteger("Panels", 5);
     }
 
     public void BackToMainPanel()
@@ -38,9 +44,6 @@ public class MainMenuManager : MonoBehaviour
         animator.SetInteger("Panels", 0);
         //Pause();
     }
-
-    
-
 
     public void Unlock()
     {
@@ -50,15 +53,10 @@ public class MainMenuManager : MonoBehaviour
     }
     private void Awake()
     {
-        if(PlayerPrefs.GetInt("unlock") == 1)
+        if (PlayerPrefs.GetInt("unlock") == 1)
         {
             Unlock();
         }
-
-        
-
-
-
         //if(InAppPurchasing.IsProductOwned(EM_IAPConstants.Product_Premium_Stuff))
         //{
         //    Unlock();
@@ -67,10 +65,13 @@ public class MainMenuManager : MonoBehaviour
         //pause.SetActive(false);
     }
 
-    private void Start() {
-        if(PlayerPrefs.HasKey("Language")){
+    private void Start()
+    {
+        if (PlayerPrefs.HasKey("Language"))
+        {
             LocalizationManager.instance.LoadLocalizedText(PlayerPrefs.GetString("Language"));
-        }else{
+        } else
+        {
             ShowWelcomePanel();
         }
     }
@@ -80,7 +81,17 @@ public class MainMenuManager : MonoBehaviour
         animator.SetInteger("Panels", 0);
         PremButton.SetActive(true);
     }
-
+    public void ResetLanguageSettings()
+    {
+        PlayerPrefs.DeleteKey("Language");
+        BackToMainPanel();
+        StartCoroutine(WaitForReset());
+    }
+    IEnumerator WaitForReset()
+    {
+        yield return new WaitForSeconds(.25f);
+        ShowWelcomePanel();
+    }
     //video
     /*public RawImage image;
     public RawImage image2;

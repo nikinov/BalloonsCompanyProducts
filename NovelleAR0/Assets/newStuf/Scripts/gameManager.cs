@@ -9,7 +9,6 @@ public class gameManager : MonoBehaviour
     //this game managet is for object mode
     //valeus
     public Selector selector;
-    public LanguageSwitcher language;
 
     //unlock
     public GameObject cover0;
@@ -122,6 +121,11 @@ public class gameManager : MonoBehaviour
             Lpanel.SetActive(true);
             UIbool = false;
         }
+    }
+    public void ResetAllSettings()
+    {
+        PlayerPrefs.DeleteKey("Language");
+        SceneManager.LoadScene(sceneBuildIndex: 0);
     }
 
     //UI functions basic

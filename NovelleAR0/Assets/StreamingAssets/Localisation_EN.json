@@ -22,6 +22,7 @@
 		{"key" : "Lb_Size" , "value" : "SIZE"},
 		{"key" : "Lb_PremiumPrice" , "value" : "10€/month"},
 		{"key" : "Lb_Price" , "value" : "PRICE"},
+        {"key" : "Lb_RsetAllSettings" , "value" : "RESET ALL SETTINGS"},
 		{"key" : "Lb_Personalised_custom_fetures" , "value" : "Personalised custom fetures"},
 		{"key" : "Lb_Scale_editing" , "value" : "Scale editing"},
 		{"key" : "Lb_Hight_editing" , "value" : "Hight editing"},
