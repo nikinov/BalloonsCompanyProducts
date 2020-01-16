@@ -4685,7 +4685,9 @@ MonoBehaviour:
     m_Options:
     - m_Text: ENGLISH
       m_Image: {fileID: 0}
-    - m_Text: RUSSIAN
+    - m_Text: "\u0420\u0423\u0421\u0421\u041A\u0418\u0419"
+      m_Image: {fileID: 0}
+    - m_Text: "\u010CE\u0160TINA"
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
